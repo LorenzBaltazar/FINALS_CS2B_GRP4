@@ -11,9 +11,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FINALS_CS2B_GRP4
 {
-    public partial class LoginForm : Form
+    public partial class frmLogin : Form
     {
-        public LoginForm()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -72,13 +72,15 @@ namespace FINALS_CS2B_GRP4
         // Goes to the dashboard if the credentials are correct
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // Username = admin , Password = 123
+            // Username and Password = admin
             string user = txtUser.Text;
             string pass = txtPass.Text;
 
-            if (user.Equals("admin", StringComparison.OrdinalIgnoreCase) && pass.Equals("123", StringComparison.OrdinalIgnoreCase))
+            if (user.Equals("admin", StringComparison.OrdinalIgnoreCase) && pass.Equals("admin", StringComparison.OrdinalIgnoreCase))
             {
-
+                MessageBox.Show("Succesfully logged in.");
+                this.DialogResult = DialogResult.Yes;
+                this.Close();
             }
             else
             {

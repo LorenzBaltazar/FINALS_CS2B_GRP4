@@ -16,7 +16,19 @@ namespace FINALS_CS2B_GRP4
             // see https://aka.ms/applicationconfiguration.
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            
+            // Shows the Login Form then when credentials are correct, runs the Dashboard Form
+            using (frmLogin loginForm = new frmLogin())
+            {
+                if (loginForm.ShowDialog() == DialogResult.Yes)
+                {
+                    Application.Run(new frmDashboard());
+                }
+                else
+                {
+                    Application.Exit();
+                }
+            }
         }
     }
 }

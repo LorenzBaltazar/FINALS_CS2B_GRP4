@@ -1,6 +1,6 @@
 ﻿namespace FINALS_CS2B_GRP4
 {
-    partial class LoginForm
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -78,18 +78,18 @@
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // LoginForm
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(384, 325);
+            this.ClientSize = new System.Drawing.Size(384, 318);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblLogin);
             this.MaximizeBox = false;
-            this.Name = "LoginForm";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Form";
             this.Load += new System.EventHandler(this.Form1_Load);
