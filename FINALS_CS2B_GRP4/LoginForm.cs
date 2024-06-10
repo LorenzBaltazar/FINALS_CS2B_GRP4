@@ -93,5 +93,10 @@ namespace FINALS_CS2B_GRP4
                 txtPass.ForeColor = Color.Gray;
             }
         }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
