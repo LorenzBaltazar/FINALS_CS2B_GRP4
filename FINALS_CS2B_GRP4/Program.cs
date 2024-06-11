@@ -22,7 +22,7 @@ namespace FINALS_CS2B_GRP4
             {
                 if (loginForm.ShowDialog() == DialogResult.Yes)
                 {
-                    Application.Run(new frmDashboard());
+                    Application.Run(new S());
                 }
                 else
                 {
