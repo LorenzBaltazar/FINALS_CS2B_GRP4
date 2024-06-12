@@ -76,10 +76,10 @@ namespace FINALS_CS2B_GRP4
             string user = txtUser.Text;
             string pass = txtPass.Text;
 
-            if (user.Equals("admin", StringComparison.OrdinalIgnoreCase) && pass.Equals("admin", StringComparison.OrdinalIgnoreCase))
+            if (user.Equals("admin") && pass.Equals("admin"))
             {
                 MessageBox.Show("Succesfully logged in.");
-                this.DialogResult = DialogResult.Yes;
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
@@ -94,9 +94,5 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
-        private void lblLogin_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

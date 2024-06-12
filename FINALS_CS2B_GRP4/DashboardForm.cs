@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FINALS_CS2B_GRP4
 {
-    public partial class S : Form
+    public partial class frmDashboard : Form
     {
-        public S()
+        public frmDashboard()
         {
             InitializeComponent();
         }
@@ -85,6 +85,27 @@ namespace FINALS_CS2B_GRP4
         private void lblLogout_MouseLeave(object sender, EventArgs e)
         {
             lblLogout.Font = new Font(lblLogout.Font, FontStyle.Regular);
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            // Shows a message box that confirms if the user wants to logout
+            DialogResult result = MessageBox.Show("Are you sure?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // If user confirms, it will hide the dashboard form and goes back to login form
+            if (result == DialogResult.Yes)
+            {
+                this.Hide();
+
+                if (new frmLogin().ShowDialog() == DialogResult.OK)
+                {
+                    this.Show();
+                }
+                else
+                {
+                    Application.Exit();
+                }
+
+            }
         }
     }
 }
