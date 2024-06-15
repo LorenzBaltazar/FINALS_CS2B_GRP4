@@ -47,7 +47,7 @@ namespace FINALS_CS2B_GRP4
                 string phoneNum = row.Cells["phone_number"].Value.ToString();
                 string email = row.Cells["email"].Value.ToString();
 
-                new frmVetView(vetID, fName, lName, specialization, phoneNum).Show(); 
+                new frmVetView(this, vetID, fName, lName, specialization, phoneNum).Show(); 
             }
         }
         public void refreshDatagrid()

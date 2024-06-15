@@ -12,11 +12,11 @@ namespace FINALS_CS2B_GRP4
 {
     public partial class frmCreateVet : Form
     {
-        private frmManageVet vet;
-        public frmCreateVet(frmManageVet v)
+        private frmManageVet create;
+        public frmCreateVet(frmManageVet create)
         {
             InitializeComponent();
-            this.vet = v;
+            this.create = create;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -39,7 +39,7 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.CreateVeterinarian(veterinarian);
             MessageBox.Show("Successfully Created.");
-            vet.refreshDatagrid();
+            create.refreshDatagrid();
             this.Close();           
         }
     }
