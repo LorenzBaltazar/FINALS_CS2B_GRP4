@@ -1,6 +1,6 @@
 ﻿namespace FINALS_CS2B_GRP4
 {
-    partial class S
+    partial class frmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(S));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDashboard));
             this.pnl = new System.Windows.Forms.Panel();
             this.picLogout = new System.Windows.Forms.PictureBox();
             this.lblLogout = new System.Windows.Forms.Label();
@@ -88,13 +88,14 @@
             this.lblLogout.TabIndex = 8;
             this.lblLogout.Text = "Logout";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
             this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
             this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // picVet
             // 
             this.picVet.Image = ((System.Drawing.Image)(resources.GetObject("picVet.Image")));
-            this.picVet.Location = new System.Drawing.Point(35, 148);
+            this.picVet.Location = new System.Drawing.Point(35, 173);
             this.picVet.Name = "picVet";
             this.picVet.Size = new System.Drawing.Size(70, 66);
             this.picVet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -104,7 +105,7 @@
             // picPets
             // 
             this.picPets.Image = ((System.Drawing.Image)(resources.GetObject("picPets.Image")));
-            this.picPets.Location = new System.Drawing.Point(43, 364);
+            this.picPets.Location = new System.Drawing.Point(43, 389);
             this.picPets.Name = "picPets";
             this.picPets.Size = new System.Drawing.Size(52, 50);
             this.picPets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -114,7 +115,7 @@
             // picOwners
             // 
             this.picOwners.Image = ((System.Drawing.Image)(resources.GetObject("picOwners.Image")));
-            this.picOwners.Location = new System.Drawing.Point(43, 261);
+            this.picOwners.Location = new System.Drawing.Point(43, 286);
             this.picOwners.Name = "picOwners";
             this.picOwners.Size = new System.Drawing.Size(52, 50);
             this.picOwners.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -124,7 +125,7 @@
             // picAppointment
             // 
             this.picAppointment.Image = global::FINALS_CS2B_GRP4.Properties.Resources.appointment;
-            this.picAppointment.Location = new System.Drawing.Point(43, 56);
+            this.picAppointment.Location = new System.Drawing.Point(43, 81);
             this.picAppointment.Name = "picAppointment";
             this.picAppointment.Size = new System.Drawing.Size(52, 50);
             this.picAppointment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +138,7 @@
             this.lblPets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPets.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPets.Location = new System.Drawing.Point(105, 379);
+            this.lblPets.Location = new System.Drawing.Point(105, 404);
             this.lblPets.Name = "lblPets";
             this.lblPets.Size = new System.Drawing.Size(117, 24);
             this.lblPets.TabIndex = 3;
@@ -153,7 +154,7 @@
             this.lblOwners.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblOwners.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOwners.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblOwners.Location = new System.Drawing.Point(122, 263);
+            this.lblOwners.Location = new System.Drawing.Point(122, 288);
             this.lblOwners.Name = "lblOwners";
             this.lblOwners.Size = new System.Drawing.Size(77, 48);
             this.lblOwners.TabIndex = 2;
@@ -169,7 +170,7 @@
             this.lblVet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblVet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblVet.Location = new System.Drawing.Point(101, 159);
+            this.lblVet.Location = new System.Drawing.Point(101, 184);
             this.lblVet.Name = "lblVet";
             this.lblVet.Size = new System.Drawing.Size(121, 48);
             this.lblVet.TabIndex = 1;
@@ -185,7 +186,7 @@
             this.lblAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAppointment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppointment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAppointment.Location = new System.Drawing.Point(100, 58);
+            this.lblAppointment.Location = new System.Drawing.Point(100, 83);
             this.lblAppointment.Name = "lblAppointment";
             this.lblAppointment.Size = new System.Drawing.Size(130, 48);
             this.lblAppointment.TabIndex = 0;
@@ -195,7 +196,7 @@
             this.lblAppointment.MouseEnter += new System.EventHandler(this.lblAppointment_MouseEnter);
             this.lblAppointment.MouseLeave += new System.EventHandler(this.lblAppointment_MouseLeave);
             // 
-            // S
+            // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -203,7 +204,7 @@
             this.Controls.Add(this.pnl);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.Name = "S";
+            this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.pnl.ResumeLayout(false);
