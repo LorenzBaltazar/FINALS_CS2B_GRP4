@@ -34,7 +34,7 @@ namespace FINALS_CS2B_GRP4
 
         private void lblVet_Click(object sender, EventArgs e)
         {
-
+            new frmManageVet().Show();
         }
 
         private void lblAppointment_MouseEnter(object sender, EventArgs e)

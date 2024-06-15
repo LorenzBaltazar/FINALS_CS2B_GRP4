@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace FINALS_CS2B_GRP4
+{
+    public partial class frmManageVet : Form
+    {
+        public frmManageVet()
+        {
+            InitializeComponent();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            new frmVetView().Show();
+        }
+
+        private void btnCreateVet_Click(object sender, EventArgs e)
+        {
+            new frmCreateVet().Show();
+        }
+    }
+}
