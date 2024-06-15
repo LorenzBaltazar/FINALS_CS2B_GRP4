@@ -45,6 +45,7 @@
             this.dgVetList.RowTemplate.Height = 24;
             this.dgVetList.Size = new System.Drawing.Size(604, 235);
             this.dgVetList.TabIndex = 0;
+            this.dgVetList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgVetList_CellContentClick);
             // 
             // lblVet
             // 
@@ -96,6 +97,7 @@
             this.Name = "frmManageVet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Veterinarians";
+            this.Load += new System.EventHandler(this.frmManageVet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgVetList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

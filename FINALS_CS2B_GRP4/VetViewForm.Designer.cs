@@ -162,6 +162,7 @@
             // 
             // txtVetID
             // 
+            this.txtVetID.Enabled = false;
             this.txtVetID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVetID.Location = new System.Drawing.Point(168, 29);
             this.txtVetID.Name = "txtVetID";

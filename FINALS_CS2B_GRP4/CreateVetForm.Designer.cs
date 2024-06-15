@@ -38,7 +38,7 @@
             this.lblSpecialization = new System.Windows.Forms.Label();
             this.lblLName = new System.Windows.Forms.Label();
             this.lblFName = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtEmail
@@ -131,17 +131,18 @@
             this.lblFName.TabIndex = 14;
             this.lblFName.Text = "First Name:";
             // 
-            // btnDelete
+            // btnCreate
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightSlateGray;
-            this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDelete.Location = new System.Drawing.Point(347, 191);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 29);
-            this.btnDelete.TabIndex = 22;
-            this.btnDelete.Text = "Create";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnCreate.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnCreate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCreate.Location = new System.Drawing.Point(347, 191);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(75, 29);
+            this.btnCreate.TabIndex = 22;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // frmCreateVet
             // 
@@ -158,7 +159,7 @@
             this.Controls.Add(this.lblSpecialization);
             this.Controls.Add(this.lblLName);
             this.Controls.Add(this.lblFName);
-            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnCreate);
             this.MaximizeBox = false;
             this.Name = "frmCreateVet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -179,6 +180,6 @@
         private System.Windows.Forms.Label lblSpecialization;
         private System.Windows.Forms.Label lblLName;
         private System.Windows.Forms.Label lblFName;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnCreate;
     }
 }
