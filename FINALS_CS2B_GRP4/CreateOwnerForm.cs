@@ -10,46 +10,54 @@ using System.Windows.Forms;
 
 namespace FINALS_CS2B_GRP4
 {
-    public partial class frmCreateVet : Form
+    public partial class frmCreateOwner : Form
     {
-        public frmCreateVet(frmManageVet create)
+        public frmCreateOwner()
         {
             InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
-
-            // Getting the data from the textboxes
-            string fName = txtFName.Text;
-            string lName = txtLName.Text;
-            string specialization = txtSpecialization.Text;
-            string phoneNum = txtPhoneNum.Text;
-            string email = txtEmail.Text;
-
-            Veterinarian veterinarian = new Veterinarian()
-            {
-                FirstName = fName,
-                LastName = lName,
-                Specialization = specialization,
-                PhoneNumber = phoneNum,
-                Email = email,
-            };
-
-            DatabaseHelper.CreateVeterinarian(veterinarian);
-            MessageBox.Show("Successfully Created.");
-            this.Close();           
+            // Open Manage Owner Form
+            frmManageOwner manageOwner = new frmManageOwner();
+            manageOwner.Show();
+            // hide owner add form
+            this.Hide();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            //clear all input text in text box
             txtFName.Text = "";
             txtLName.Text = "";
-            txtSpecialization.Text = "";
+            txtAddress.Text = "";
             txtPhoneNum.Text = "";
             txtEmail.Text = "";
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            string fName = txtFName.Text;
+            string lName = txtLName.Text;
+            string address = txtAddress.Text;
+            string phoneNum = txtPhoneNum.Text;
+            string email = txtEmail.Text;
+
+            Owner owner = new Owner()
+            {
+                FirstName = fName,
+                LastName = lName,
+                Address = address,
+                PhoneNumber = phoneNum,
+                Email = email,
+            };
+
+            DatabaseHelper.CreateOwner(owner);
+            MessageBox.Show("Successfully Created.");
+            this.Close();           
         }
     }
 }

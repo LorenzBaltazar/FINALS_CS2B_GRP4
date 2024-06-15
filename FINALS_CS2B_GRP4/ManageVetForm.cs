@@ -20,13 +20,14 @@ namespace FINALS_CS2B_GRP4
         private void btnCreateVet_Click(object sender, EventArgs e)
         {
             frmCreateVet createVet = new frmCreateVet(this);
-            createVet.Show();
+            if (createVet.ShowDialog() == DialogResult.OK)
+                this.refreshDatagrid();
+            createVet.Dispose();
         }
 
         private void frmManageVet_Load(object sender, EventArgs e)
         {
-            DataTable dtVet = DatabaseHelper.SelectAllVeterinarians();
-            dgVetList.DataSource = dtVet;
+            refreshDatagrid();
         }
 
         public void refreshDatagrid()

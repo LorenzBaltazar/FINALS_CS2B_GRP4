@@ -13,12 +13,12 @@ namespace FINALS_CS2B_GRP4
 {
     public partial class frmVetView : Form
     {
-        private frmManageVet vet;
+        private Form parentForm;
         private int vetID;
-        public frmVetView(frmManageVet vet, int vetID, string fName, string lName, string specialization, string phoneNum, string email)
+        public frmVetView(Form parentForm, int vetID, string fName, string lName, string specialization, string phoneNum, string email)
         {
             InitializeComponent();
-            this.vet = vet;
+            this.parentForm = parentForm;
 
             // Fills up the corresponding data to the textboxes
             this.vetID = vetID;
@@ -28,9 +28,18 @@ namespace FINALS_CS2B_GRP4
             txtSpecialization.Text = specialization;
             txtPhoneNum.Text = phoneNum;
             txtEmail.Text = email;
+            Veterinarian vet = new Veterinarian()
+            {
+                VetId = vetID,
+                FirstName = fName,
+                LastName = lName,
+                Specialization = specialization,
+                PhoneNumber = phoneNum,
+                Email = email
+            };
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             string editFName = txtFName.Text;
             string editLName = txtLName.Text;
@@ -49,7 +58,8 @@ namespace FINALS_CS2B_GRP4
             };
             DatabaseHelper.UpdateVeterinarian(editVet);
             MessageBox.Show("Successfully Edited.");
-            vet.refreshDatagrid();
+            if (parentForm is IRefreshable)
+                ((IRefreshable) parentForm).refreshDatagrid();
             this.Close();
 
         }
@@ -62,7 +72,8 @@ namespace FINALS_CS2B_GRP4
             {
                 DatabaseHelper.DeleteVeterinarian(vetID);
                 MessageBox.Show("Successfully Deleted.");
-                vet.refreshDatagrid();
+                if (parentForm is IRefreshable)
+                    ((IRefreshable) parentForm).refreshDatagrid();
                 this.Close();
             }
         }

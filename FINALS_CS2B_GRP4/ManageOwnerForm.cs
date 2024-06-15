@@ -17,21 +17,40 @@ namespace FINALS_CS2B_GRP4
             InitializeComponent();
         }
 
-        private void btncreate_Click(object sender, EventArgs e)
+        public void refreshDatagrid()
         {
-            //open OwnerAdd Form
-            frmAddOwner addOwner = new frmAddOwner();
-            addOwner.Show();
-            // hide manage owner form
-            this.Hide();
+            DataTable dtVet = DatabaseHelper.SelectAllOwners();
+            dgOwnerList.DataSource = dtVet;
         }
 
-        private void btnview_Click(object sender, EventArgs e)
+        private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmOwnerView ownerView = new frmOwnerView();
-            ownerView.Show();
-            // hide manage owner form
-            this.Hide();
+            frmCreateOwner addOwner = new frmCreateOwner();
+            if (addOwner.ShowDialog() == DialogResult.OK)
+                this.refreshDatagrid();
+            addOwner.Dispose();
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dgOwnerList.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgOwnerList.SelectedRows[0];
+                int ownerID = Convert.ToInt32(row.Cells["owner_id"].Value);
+                string fName = row.Cells["first_name"].Value.ToString();
+                string lName = row.Cells["last_name"].Value.ToString();
+                string address = row.Cells["address"].Value.ToString();
+                string phoneNum = row.Cells["phone_number"].Value.ToString();
+                string email = row.Cells["email"].Value.ToString();
+
+                frmOwnerView ownerView = new frmOwnerView(this, ownerID, fName, lName, address, phoneNum, email);
+                ownerView.Show();
+            }
+        }
+
+        private void frmManageOwner_Load(object sender, EventArgs e)
+        {
+            refreshDatagrid();
         }
     }
 }
