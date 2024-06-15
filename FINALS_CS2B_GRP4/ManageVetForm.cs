@@ -17,17 +17,11 @@ namespace FINALS_CS2B_GRP4
             InitializeComponent();
         }
 
-        private void btnView_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCreateVet_Click(object sender, EventArgs e)
         {
             frmCreateVet createVet = new frmCreateVet(this);
             createVet.Show();
         }
-
 
         private void frmManageVet_Load(object sender, EventArgs e)
         {
@@ -35,11 +29,17 @@ namespace FINALS_CS2B_GRP4
             dgVetList.DataSource = dtVet;
         }
 
-        private void dgVetList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void refreshDatagrid()
         {
-            if (e.RowIndex >= 0)
+            DataTable dtVet = DatabaseHelper.SelectAllVeterinarians();
+            dgVetList.DataSource = dtVet;
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dgVetList.SelectedRows.Count > 0)
             {
-                DataGridViewRow row = dgVetList.Rows[e.RowIndex];
+                DataGridViewRow row = dgVetList.SelectedRows[0];
                 int vetID = Convert.ToInt32(row.Cells["vet_id"].Value);
                 string fName = row.Cells["first_name"].Value.ToString();
                 string lName = row.Cells["last_name"].Value.ToString();
@@ -47,13 +47,13 @@ namespace FINALS_CS2B_GRP4
                 string phoneNum = row.Cells["phone_number"].Value.ToString();
                 string email = row.Cells["email"].Value.ToString();
 
-                new frmVetView(this, vetID, fName, lName, specialization, phoneNum).Show(); 
+                new frmVetView(this, vetID, fName, lName, specialization, phoneNum, email).Show();
+            }
+            else
+            {
+                MessageBox.Show("There was no selected veterinarian to view.");
             }
         }
-        public void refreshDatagrid()
-        {
-            DataTable dtVet = DatabaseHelper.SelectAllVeterinarians();
-            dgVetList.DataSource = dtVet;
-        }
+
     }
 }

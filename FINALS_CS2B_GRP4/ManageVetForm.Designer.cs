@@ -41,11 +41,11 @@
             this.dgVetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgVetList.Location = new System.Drawing.Point(52, 89);
             this.dgVetList.Name = "dgVetList";
+            this.dgVetList.ReadOnly = true;
             this.dgVetList.RowHeadersWidth = 51;
             this.dgVetList.RowTemplate.Height = 24;
             this.dgVetList.Size = new System.Drawing.Size(604, 235);
             this.dgVetList.TabIndex = 0;
-            this.dgVetList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgVetList_CellContentClick);
             // 
             // lblVet
             // 
@@ -79,7 +79,7 @@
             this.btnView.Location = new System.Drawing.Point(443, 346);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(84, 35);
-            this.btnView.TabIndex = 3;
+            this.btnView.TabIndex = 1;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);

@@ -13,12 +13,12 @@ namespace FINALS_CS2B_GRP4
 {
     public partial class frmVetView : Form
     {
-        private frmManageVet del;
+        private frmManageVet vet;
         private int vetID;
-        public frmVetView(frmManageVet del, int vetID, string fName, string lName, string specialization, string phoneNum)
+        public frmVetView(frmManageVet vet, int vetID, string fName, string lName, string specialization, string phoneNum, string email)
         {
             InitializeComponent();
-            this.del = del;
+            this.vet = vet;
 
             // Fills up the corresponding data to the textboxes
             this.vetID = vetID;
@@ -27,11 +27,31 @@ namespace FINALS_CS2B_GRP4
             txtLName.Text = lName;
             txtSpecialization.Text = specialization;
             txtPhoneNum.Text = phoneNum;
+            txtEmail.Text = email;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            
+            string editFName = txtFName.Text;
+            string editLName = txtLName.Text;
+            string editSpecialization = txtSpecialization.Text;
+            string editPhoneNum = txtPhoneNum.Text;
+            string editEmail = txtEmail.Text;
+
+            Veterinarian editVet = new Veterinarian()
+            {
+                VetId = vetID,
+                FirstName = editFName,
+                LastName = editLName,
+                Specialization = editSpecialization,
+                PhoneNumber = editPhoneNum,
+                Email = editEmail
+            };
+            DatabaseHelper.UpdateVeterinarian(editVet);
+            MessageBox.Show("Successfully Edited.");
+            vet.refreshDatagrid();
+            this.Close();
+
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -42,7 +62,7 @@ namespace FINALS_CS2B_GRP4
             {
                 DatabaseHelper.DeleteVeterinarian(vetID);
                 MessageBox.Show("Successfully Deleted.");
-                del.refreshDatagrid();
+                vet.refreshDatagrid();
                 this.Close();
             }
         }
