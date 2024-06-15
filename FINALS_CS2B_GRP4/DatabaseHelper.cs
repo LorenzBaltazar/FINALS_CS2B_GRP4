@@ -11,6 +11,22 @@ namespace FINALS_CS2B_GRP4
     {
         private static string connectionString = "server=localhost;user id=root;password=;database=vetis_db";
 
+		public static DataTable SelectAllAppointments()
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM appointments";
+                var command = new MySqlCommand(query, connection);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
+            }
+        }
+
         public static void CreateAppointment(Appointment appointment)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -88,6 +104,22 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
+		
+		public static DataTable SelectAllOwners()
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM owners";
+                var command = new MySqlCommand(query, connection);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
+            }
+        }
 
         public static void CreateOwner(Owner owner)
         {
@@ -160,6 +192,22 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
+		
+		public static DataTable SelectAllPets()
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM pets";
+                var command = new MySqlCommand(query, connection);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
+            }
+        }
 
         public static void CreatePet(Pet pet)
         {
@@ -230,6 +278,22 @@ namespace FINALS_CS2B_GRP4
                 command.Parameters.AddWithValue("@PetId", petId);
                 connection.Open();
                 command.ExecuteNonQuery();
+            }
+        }
+		
+		public static DataTable SelectAllVeterinarians()
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM veterinarians";
+                var command = new MySqlCommand(query, connection);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
             }
         }
 
