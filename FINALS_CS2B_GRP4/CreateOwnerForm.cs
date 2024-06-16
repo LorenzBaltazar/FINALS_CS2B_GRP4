@@ -12,19 +12,12 @@ namespace FINALS_CS2B_GRP4
 {
     public partial class frmCreateOwner : Form
     {
-        public frmCreateOwner()
+        IRefreshable refreshable;
+        public frmCreateOwner(IRefreshable refreshable = null)
         {
+            this.refreshable = refreshable;
             InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            // Open Manage Owner Form
-            frmManageOwner manageOwner = new frmManageOwner();
-            manageOwner.Show();
-            // hide owner add form
-            this.Hide();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -57,6 +50,8 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.CreateOwner(owner);
             MessageBox.Show("Successfully Created.");
+            if (!(refreshable is null))
+                refreshable.refreshDatagrid();
             this.Close();           
         }
     }

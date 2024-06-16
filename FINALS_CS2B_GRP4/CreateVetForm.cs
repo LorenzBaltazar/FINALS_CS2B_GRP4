@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,10 @@ namespace FINALS_CS2B_GRP4
 {
     public partial class frmCreateVet : Form
     {
-        public frmCreateVet(frmManageVet create)
+        IRefreshable refreshable;
+        public frmCreateVet(IRefreshable refreshable = null)
         {
+            this.refreshable = refreshable;
             InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
         }
@@ -40,6 +43,8 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.CreateVeterinarian(veterinarian);
             MessageBox.Show("Successfully Created.");
+            if (!(refreshable is null))
+                refreshable.refreshDatagrid();
             this.Close();           
         }
 

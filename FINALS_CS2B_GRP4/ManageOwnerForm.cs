@@ -25,10 +25,8 @@ namespace FINALS_CS2B_GRP4
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            frmCreateOwner createOwner = new frmCreateOwner();
-            if (createOwner.ShowDialog() == DialogResult.OK)
-                this.refreshDatagrid();
-            createOwner.Dispose();
+            frmCreateOwner createOwner = new frmCreateOwner(this);
+            createOwner.Show();
         }
 
         private void btnView_Click(object sender, EventArgs e)

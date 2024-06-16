@@ -20,9 +20,7 @@ namespace FINALS_CS2B_GRP4
         private void btnCreateVet_Click(object sender, EventArgs e)
         {
             frmCreateVet createVet = new frmCreateVet(this);
-            if (createVet.ShowDialog() == DialogResult.OK)
-                this.refreshDatagrid();
-            createVet.Dispose();
+            createVet.Show();
         }
 
         private void frmManageVet_Load(object sender, EventArgs e)

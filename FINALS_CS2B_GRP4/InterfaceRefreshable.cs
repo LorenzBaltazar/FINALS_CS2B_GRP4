@@ -2,7 +2,7 @@
 
 namespace FINALS_CS2B_GRP4
 {
-    internal interface IRefreshable
+    public interface IRefreshable
     {
         void refreshDatagrid();
     }

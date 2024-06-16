@@ -49,10 +49,8 @@ namespace FINALS_CS2B_GRP4
 
         private void btnCreatePet_Click(object sender, EventArgs e)
         {
-            CreatePetForm createPet = new CreatePetForm();
-            if (createPet.ShowDialog() == DialogResult.OK)
-                this.refreshDatagrid();
-            createPet.Dispose();
+            CreatePetForm createPet = new CreatePetForm(this);
+            createPet.Show();
         }
 
         private void btnView_Click(object sender, EventArgs e)

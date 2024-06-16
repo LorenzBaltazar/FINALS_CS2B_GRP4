@@ -233,6 +233,7 @@
             this.Controls.Add(this.btnCreate);
             this.Name = "CreatePetForm";
             this.Text = "Create Pet";
+            this.Load += new System.EventHandler(this.CreatePetForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

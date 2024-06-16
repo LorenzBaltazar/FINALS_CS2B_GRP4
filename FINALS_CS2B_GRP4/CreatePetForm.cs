@@ -13,8 +13,10 @@ namespace FINALS_CS2B_GRP4
     public partial class CreatePetForm : Form
     {
         private int? ownerId = null;
-        public CreatePetForm()
+        private IRefreshable refreshable;
+        public CreatePetForm(IRefreshable refreshable = null)
         {
+            this.refreshable = refreshable;
             DialogResult = DialogResult.Cancel;
             InitializeComponent();
         }
@@ -53,6 +55,8 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.CreatePet(pet);
             MessageBox.Show("Successfully Created.");
+            if (!(refreshable is null))
+                refreshable.refreshDatagrid();
             this.Close();           
         }
 
@@ -60,6 +64,11 @@ namespace FINALS_CS2B_GRP4
         {
             txtOwner.Text = "";
             ownerId = null;
+
+        }
+
+        private void CreatePetForm_Load(object sender, EventArgs e)
+        {
 
         }
     }
