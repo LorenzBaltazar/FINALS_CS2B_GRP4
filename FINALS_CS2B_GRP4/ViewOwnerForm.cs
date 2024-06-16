@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace FINALS_CS2B_GRP4
 {
-    public partial class frmOwnerView : Form
+    public partial class frmOwnerView : Form, IRefreshable
     {
         private Form parentForm;
         private int ownerID;
@@ -49,7 +49,7 @@ namespace FINALS_CS2B_GRP4
             DatabaseHelper.UpdateOwner(editOwner);
             MessageBox.Show("Successfully Edited.");
             if (parentForm is IRefreshable)
-                ((IRefreshable) parentForm).refreshDatagrid();
+                ((IRefreshable)parentForm).refreshDatagrid();
             this.Close();
         }
 
@@ -59,12 +59,73 @@ namespace FINALS_CS2B_GRP4
 
             if (result == DialogResult.Yes)
             {
+                List<Pet> owner_pets = DatabaseHelper.SelectPetsByOwnerList(ownerID);
+                if (owner_pets.Count > 0)
+                {
+                    DialogResult pets_result = MessageBox.Show("Owner has pets. Do you want to delete the pets too?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (pets_result == DialogResult.Yes)
+                    {
+                        foreach (Pet pet in owner_pets)
+                        {
+                            DatabaseHelper.DeletePet(pet.PetId);
+                        }
+                    }
+                }
                 DatabaseHelper.DeleteOwner(ownerID);
                 MessageBox.Show("Successfully Deleted.");
                 if (parentForm is IRefreshable)
-                    ((IRefreshable) parentForm).refreshDatagrid();
+                    ((IRefreshable)parentForm).refreshDatagrid();
                 this.Close();
             }
+        }
+
+        private void btnView_Click(object sender, EventArgs e)
+        {
+            if (dgPetList.SelectedRows.Count > 0)
+            {
+                DataGridViewRow row = dgPetList.SelectedRows[0];
+                int petId = Convert.ToInt32(row.Cells["pet_id"].Value);
+                string name = row.Cells["name"].Value.ToString();
+                string species = row.Cells["species"].Value.ToString();
+                string breed = row.Cells["breed"].Value.ToString();
+
+                DateTime? birthDate;
+                if (row.Cells["birth_date"].Value.Equals(DBNull.Value))
+                    birthDate = null;
+                else
+                    birthDate = Convert.ToDateTime(row.Cells["birth_date"].Value);
+
+                int? ownerId;
+                string ownerName = ""; 
+                if (row.Cells["owner_id"].Value.Equals(DBNull.Value))
+                {
+                    ownerId = null;
+                }
+                else
+                {
+                    ownerId = Convert.ToInt32(row.Cells["owner_id"].Value);
+                    Owner owner = DatabaseHelper.ReadOwner((int)ownerId);
+                    ownerName = owner.LastName + ", " + owner.FirstName;
+                }
+
+                new frmPetView(this, petId, name, species, breed, birthDate, ownerId, ownerName).Show();
+            }
+            else
+            {
+                MessageBox.Show("There was no selected pets to view.");
+            }
+
+        }
+
+        private void frmOwnerView_Load(object sender, EventArgs e)
+        {
+            refreshDatagrid();
+        }
+        public void refreshDatagrid()
+        {
+            DataTable dtPet = DatabaseHelper.SelectPetsByOwner(ownerID);
+            dgPetList.DataSource = dtPet;
+            dgPetList.Columns["owner_id"].Visible = false;
         }
     }
 }

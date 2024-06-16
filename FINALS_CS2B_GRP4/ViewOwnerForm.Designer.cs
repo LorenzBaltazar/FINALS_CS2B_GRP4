@@ -43,7 +43,11 @@
             this.lblLname = new System.Windows.Forms.Label();
             this.lblfname = new System.Windows.Forms.Label();
             this.pblogo = new System.Windows.Forms.PictureBox();
+            this.lblPets = new System.Windows.Forms.Label();
+            this.dgPetList = new System.Windows.Forms.DataGridView();
+            this.btnView = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPetList)).BeginInit();
             this.SuspendLayout();
             // 
             // lblownerid
@@ -52,9 +56,9 @@
             this.lblownerid.Font = new System.Drawing.Font("Calibri", 9F);
             this.lblownerid.Location = new System.Drawing.Point(27, 24);
             this.lblownerid.Name = "lblownerid";
-            this.lblownerid.Size = new System.Drawing.Size(57, 14);
+            this.lblownerid.Size = new System.Drawing.Size(60, 14);
             this.lblownerid.TabIndex = 47;
-            this.lblownerid.Text = "Owner ID";
+            this.lblownerid.Text = "Owner ID:";
             // 
             // txtOwnerID
             // 
@@ -184,18 +188,61 @@
             // 
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pblogo.Image = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
-            this.pblogo.Location = new System.Drawing.Point(12, 172);
+            this.pblogo.Location = new System.Drawing.Point(12, 166);
             this.pblogo.Name = "pblogo";
             this.pblogo.Size = new System.Drawing.Size(58, 33);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 42;
             this.pblogo.TabStop = false;
             // 
+            // lblPets
+            // 
+            this.lblPets.AutoSize = true;
+            this.lblPets.Font = new System.Drawing.Font("Calibri", 9F);
+            this.lblPets.Location = new System.Drawing.Point(27, 220);
+            this.lblPets.Name = "lblPets";
+            this.lblPets.Size = new System.Drawing.Size(33, 14);
+            this.lblPets.TabIndex = 48;
+            this.lblPets.Text = "Pets:";
+            // 
+            // dgPetList
+            // 
+            this.dgPetList.AllowUserToAddRows = false;
+            this.dgPetList.AllowUserToDeleteRows = false;
+            this.dgPetList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgPetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPetList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgPetList.Location = new System.Drawing.Point(23, 249);
+            this.dgPetList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgPetList.Name = "dgPetList";
+            this.dgPetList.ReadOnly = true;
+            this.dgPetList.RowHeadersWidth = 51;
+            this.dgPetList.RowTemplate.Height = 24;
+            this.dgPetList.Size = new System.Drawing.Size(468, 155);
+            this.dgPetList.TabIndex = 49;
+            // 
+            // btnView
+            // 
+            this.btnView.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnView.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnView.Location = new System.Drawing.Point(381, 211);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnView.Name = "btnView";
+            this.btnView.Size = new System.Drawing.Size(107, 28);
+            this.btnView.TabIndex = 50;
+            this.btnView.Text = "View Pet";
+            this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
+            // 
             // frmOwnerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 218);
+            this.ClientSize = new System.Drawing.Size(515, 415);
+            this.Controls.Add(this.btnView);
+            this.Controls.Add(this.dgPetList);
+            this.Controls.Add(this.lblPets);
             this.Controls.Add(this.lblownerid);
             this.Controls.Add(this.txtOwnerID);
             this.Controls.Add(this.btnDelete);
@@ -215,7 +262,9 @@
             this.Name = "frmOwnerView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Owner";
+            this.Load += new System.EventHandler(this.frmOwnerView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPetList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +286,8 @@
         private System.Windows.Forms.Label lbladdress;
         private System.Windows.Forms.Label lblLname;
         private System.Windows.Forms.Label lblfname;
+        private System.Windows.Forms.Label lblPets;
+        private System.Windows.Forms.DataGridView dgPetList;
+        private System.Windows.Forms.Button btnView;
     }
 }
