@@ -19,8 +19,8 @@ namespace FINALS_CS2B_GRP4
 
         public void refreshDatagrid()
         {
-            DataTable dtVet = DatabaseHelper.SelectAllOwners();
-            dgOwnerList.DataSource = dtVet;
+            DataTable dtOwner = DatabaseHelper.SelectAllOwners();
+            dgOwnerList.DataSource = dtOwner;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -43,6 +43,10 @@ namespace FINALS_CS2B_GRP4
 
                 frmOwnerView ownerView = new frmOwnerView(this, ownerID, fName, lName, address, phoneNum, email);
                 ownerView.Show();
+            }
+            else
+            {
+                MessageBox.Show("There was no selected owners to view.");
             }
         }
 

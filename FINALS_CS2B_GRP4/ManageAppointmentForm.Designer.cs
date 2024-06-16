@@ -30,7 +30,7 @@
         {
             this.btnView = new System.Windows.Forms.Button();
             this.btnCreateVet = new System.Windows.Forms.Button();
-            this.lblPet = new System.Windows.Forms.Label();
+            this.lblAppointment = new System.Windows.Forms.Label();
             this.dgAppointmentList = new System.Windows.Forms.DataGridView();
             this.pblogo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgAppointmentList)).BeginInit();
@@ -65,17 +65,17 @@
             this.btnCreateVet.UseVisualStyleBackColor = false;
             this.btnCreateVet.Click += new System.EventHandler(this.btnCreateAppointment_Click);
             // 
-            // lblPet
+            // lblAppointment
             // 
-            this.lblPet.AutoSize = true;
-            this.lblPet.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPet.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lblPet.Location = new System.Drawing.Point(259, 19);
-            this.lblPet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPet.Name = "lblPet";
-            this.lblPet.Size = new System.Drawing.Size(174, 33);
-            this.lblPet.TabIndex = 18;
-            this.lblPet.Text = "Appointments";
+            this.lblAppointment.AutoSize = true;
+            this.lblAppointment.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointment.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.lblAppointment.Location = new System.Drawing.Point(259, 19);
+            this.lblAppointment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAppointment.Name = "lblAppointment";
+            this.lblAppointment.Size = new System.Drawing.Size(174, 33);
+            this.lblAppointment.TabIndex = 18;
+            this.lblAppointment.Text = "Appointments";
             // 
             // dgAppointmentList
             // 
@@ -112,7 +112,7 @@
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnCreateVet);
-            this.Controls.Add(this.lblPet);
+            this.Controls.Add(this.lblAppointment);
             this.Controls.Add(this.dgAppointmentList);
             this.Name = "frmManageAppointment";
             this.Text = "Appointments";
@@ -129,7 +129,7 @@
         private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.Button btnCreateVet;
-        private System.Windows.Forms.Label lblPet;
+        private System.Windows.Forms.Label lblAppointment;
         private System.Windows.Forms.DataGridView dgAppointmentList;
     }
 }

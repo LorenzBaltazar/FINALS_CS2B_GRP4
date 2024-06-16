@@ -103,6 +103,10 @@ namespace FINALS_CS2B_GRP4
                 frmViewAppointment appointmentView = new frmViewAppointment(this, appointment);
                 appointmentView.Show();
             }
+            else
+            {
+                MessageBox.Show("There was no selected appointments to view.");
+            }
 
         }
     }

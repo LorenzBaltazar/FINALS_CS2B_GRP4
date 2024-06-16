@@ -61,17 +61,19 @@
             this.pnl.Controls.Add(this.lblOwners);
             this.pnl.Controls.Add(this.lblVet);
             this.pnl.Controls.Add(this.lblAppointment);
-            this.pnl.Location = new System.Drawing.Point(-6, -4);
+            this.pnl.Location = new System.Drawing.Point(-4, -3);
+            this.pnl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnl.Name = "pnl";
-            this.pnl.Size = new System.Drawing.Size(268, 564);
+            this.pnl.Size = new System.Drawing.Size(201, 458);
             this.pnl.TabIndex = 0;
             // 
             // picLogout
             // 
             this.picLogout.Image = global::FINALS_CS2B_GRP4.Properties.Resources.logout;
-            this.picLogout.Location = new System.Drawing.Point(156, 515);
+            this.picLogout.Location = new System.Drawing.Point(117, 418);
+            this.picLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picLogout.Name = "picLogout";
-            this.picLogout.Size = new System.Drawing.Size(36, 34);
+            this.picLogout.Size = new System.Drawing.Size(27, 28);
             this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picLogout.TabIndex = 9;
             this.picLogout.TabStop = false;
@@ -82,9 +84,10 @@
             this.lblLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblLogout.Font = new System.Drawing.Font("Calibri", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLogout.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLogout.Location = new System.Drawing.Point(191, 520);
+            this.lblLogout.Location = new System.Drawing.Point(143, 422);
+            this.lblLogout.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLogout.Name = "lblLogout";
-            this.lblLogout.Size = new System.Drawing.Size(61, 22);
+            this.lblLogout.Size = new System.Drawing.Size(50, 18);
             this.lblLogout.TabIndex = 8;
             this.lblLogout.Text = "Logout";
             this.lblLogout.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -95,9 +98,10 @@
             // picVet
             // 
             this.picVet.Image = ((System.Drawing.Image)(resources.GetObject("picVet.Image")));
-            this.picVet.Location = new System.Drawing.Point(35, 173);
+            this.picVet.Location = new System.Drawing.Point(26, 141);
+            this.picVet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picVet.Name = "picVet";
-            this.picVet.Size = new System.Drawing.Size(70, 66);
+            this.picVet.Size = new System.Drawing.Size(52, 54);
             this.picVet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picVet.TabIndex = 7;
             this.picVet.TabStop = false;
@@ -105,9 +109,10 @@
             // picPets
             // 
             this.picPets.Image = ((System.Drawing.Image)(resources.GetObject("picPets.Image")));
-            this.picPets.Location = new System.Drawing.Point(43, 389);
+            this.picPets.Location = new System.Drawing.Point(32, 316);
+            this.picPets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picPets.Name = "picPets";
-            this.picPets.Size = new System.Drawing.Size(52, 50);
+            this.picPets.Size = new System.Drawing.Size(39, 41);
             this.picPets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPets.TabIndex = 6;
             this.picPets.TabStop = false;
@@ -115,9 +120,10 @@
             // picOwners
             // 
             this.picOwners.Image = ((System.Drawing.Image)(resources.GetObject("picOwners.Image")));
-            this.picOwners.Location = new System.Drawing.Point(43, 286);
+            this.picOwners.Location = new System.Drawing.Point(32, 232);
+            this.picOwners.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picOwners.Name = "picOwners";
-            this.picOwners.Size = new System.Drawing.Size(52, 50);
+            this.picOwners.Size = new System.Drawing.Size(39, 41);
             this.picOwners.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picOwners.TabIndex = 5;
             this.picOwners.TabStop = false;
@@ -125,9 +131,10 @@
             // picAppointment
             // 
             this.picAppointment.Image = global::FINALS_CS2B_GRP4.Properties.Resources.appointment;
-            this.picAppointment.Location = new System.Drawing.Point(43, 81);
+            this.picAppointment.Location = new System.Drawing.Point(32, 66);
+            this.picAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picAppointment.Name = "picAppointment";
-            this.picAppointment.Size = new System.Drawing.Size(52, 50);
+            this.picAppointment.Size = new System.Drawing.Size(39, 41);
             this.picAppointment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picAppointment.TabIndex = 1;
             this.picAppointment.TabStop = false;
@@ -138,9 +145,10 @@
             this.lblPets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPets.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPets.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblPets.Location = new System.Drawing.Point(105, 404);
+            this.lblPets.Location = new System.Drawing.Point(79, 328);
+            this.lblPets.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPets.Name = "lblPets";
-            this.lblPets.Size = new System.Drawing.Size(117, 24);
+            this.lblPets.Size = new System.Drawing.Size(94, 19);
             this.lblPets.TabIndex = 3;
             this.lblPets.Text = "Manage Pets";
             this.lblPets.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -154,9 +162,10 @@
             this.lblOwners.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblOwners.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOwners.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblOwners.Location = new System.Drawing.Point(122, 288);
+            this.lblOwners.Location = new System.Drawing.Point(92, 234);
+            this.lblOwners.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOwners.Name = "lblOwners";
-            this.lblOwners.Size = new System.Drawing.Size(77, 48);
+            this.lblOwners.Size = new System.Drawing.Size(62, 38);
             this.lblOwners.TabIndex = 2;
             this.lblOwners.Text = "Manage\nOwners";
             this.lblOwners.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -170,9 +179,10 @@
             this.lblVet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblVet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblVet.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblVet.Location = new System.Drawing.Point(101, 184);
+            this.lblVet.Location = new System.Drawing.Point(76, 150);
+            this.lblVet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVet.Name = "lblVet";
-            this.lblVet.Size = new System.Drawing.Size(121, 48);
+            this.lblVet.Size = new System.Drawing.Size(95, 38);
             this.lblVet.TabIndex = 1;
             this.lblVet.Text = "Manage\nVeterinarians";
             this.lblVet.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -186,9 +196,10 @@
             this.lblAppointment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblAppointment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppointment.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblAppointment.Location = new System.Drawing.Point(100, 83);
+            this.lblAppointment.Location = new System.Drawing.Point(75, 67);
+            this.lblAppointment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAppointment.Name = "lblAppointment";
-            this.lblAppointment.Size = new System.Drawing.Size(130, 48);
+            this.lblAppointment.Size = new System.Drawing.Size(99, 38);
             this.lblAppointment.TabIndex = 0;
             this.lblAppointment.Text = "Manage\nAppointments";
             this.lblAppointment.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -198,11 +209,10 @@
             // 
             // frmDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pnl);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "frmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

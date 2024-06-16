@@ -26,8 +26,8 @@ namespace FINALS_CS2B_GRP4
         }
         public void refreshDatagrid()
         {
-            DataTable dtVet = DatabaseHelper.SelectAllOwners();
-            dgOwnerList.DataSource = dtVet;
+            DataTable dtOwner = DatabaseHelper.SelectAllOwners();
+            dgOwnerList.DataSource = dtOwner;
         }
 
         private void btnSelect_Click(object sender, EventArgs e)
