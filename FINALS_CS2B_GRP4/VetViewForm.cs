@@ -57,7 +57,7 @@ namespace FINALS_CS2B_GRP4
                 Email = editEmail
             };
             DatabaseHelper.UpdateVeterinarian(editVet);
-            MessageBox.Show("Successfully Edited.");
+            MessageBox.Show("Successfully Updated.");
             if (parentForm is IRefreshable)
                 ((IRefreshable) parentForm).refreshDatagrid();
             this.Close();

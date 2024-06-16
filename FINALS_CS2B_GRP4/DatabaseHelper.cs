@@ -138,7 +138,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
-        public Owner ReadOwner(int ownerId)
+        public static Owner ReadOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -207,6 +207,51 @@ namespace FINALS_CS2B_GRP4
                     dataTable.Load(reader);
                 }
                 return dataTable;
+            }
+        }
+
+        public static DataTable SelectPetsByOwner(int ownerId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM pets WHERE owner_id = @OwnerId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OwnerId", ownerId);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
+            }
+        }
+
+        public static List<Pet> SelectPetsByOwnerList(int ownerId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM pets WHERE owner_id = @OwnerId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OwnerId", ownerId);
+                var pets = new List<Pet>();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        pets.Add(new Pet
+                        {
+                            PetId = reader.GetInt32("pet_id"),
+                            Name = reader.GetString("name"),
+                            Species = reader.GetString("species"),
+                            Breed = reader.GetString("breed"),
+                            BirthDate = reader.GetDateTime("birth_date"),
+                            OwnerId = reader.IsDBNull(reader.GetOrdinal("owner_id")) ? (int?)null : reader.GetInt32("owner_id")
+                        });
+                    }
+                }
+                return pets;
             }
         }
 

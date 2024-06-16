@@ -10,28 +10,27 @@ using System.Windows.Forms;
 
 namespace FINALS_CS2B_GRP4
 {
-    public partial class frmManageOwner : Form, IRefreshable
+    public partial class frmSelectOwner : Form, IRefreshable
     {
-        public frmManageOwner()
+        public Owner selectedOwner;
+        public frmSelectOwner()
         {
             InitializeComponent();
+            DialogResult = DialogResult.Cancel;
+            CancelButton = btnCancel;
         }
 
+        private void frmSelectOwner_Load(object sender, EventArgs e)
+        {
+            refreshDatagrid();
+        }
         public void refreshDatagrid()
         {
             DataTable dtVet = DatabaseHelper.SelectAllOwners();
             dgOwnerList.DataSource = dtVet;
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            frmCreateOwner createOwner = new frmCreateOwner();
-            if (createOwner.ShowDialog() == DialogResult.OK)
-                this.refreshDatagrid();
-            createOwner.Dispose();
-        }
-
-        private void btnView_Click(object sender, EventArgs e)
+        private void btnSelect_Click(object sender, EventArgs e)
         {
             if (dgOwnerList.SelectedRows.Count > 0)
             {
@@ -43,14 +42,11 @@ namespace FINALS_CS2B_GRP4
                 string phoneNum = row.Cells["phone_number"].Value.ToString();
                 string email = row.Cells["email"].Value.ToString();
 
-                frmOwnerView ownerView = new frmOwnerView(this, ownerID, fName, lName, address, phoneNum, email);
-                ownerView.Show();
+                Owner owner = new Owner { Address = address, Email = email, FirstName = fName, LastName = lName, OwnerId = ownerID, PhoneNumber = phoneNum };
+                selectedOwner = owner;
+                DialogResult = DialogResult.OK;
+                this.Close();
             }
-        }
-
-        private void frmManageOwner_Load(object sender, EventArgs e)
-        {
-            refreshDatagrid();
         }
     }
 }

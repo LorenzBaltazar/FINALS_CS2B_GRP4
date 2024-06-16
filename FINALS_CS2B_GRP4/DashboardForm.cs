@@ -24,19 +24,20 @@ namespace FINALS_CS2B_GRP4
 
         private void lblOwners_Click(object sender, EventArgs e)
         {
-            //Open Manage Owner Form
             frmManageOwner manageOwner = new frmManageOwner();
             manageOwner.Show();
         }
 
         private void lblPets_Click(object sender, EventArgs e)
         {
-
+            frmManagePet managePet = new frmManagePet();
+            managePet.Show();
         }
 
         private void lblVet_Click(object sender, EventArgs e)
         {
-            new frmManageVet().Show();
+            frmManageVet manageVet = new frmManageVet();
+            manageVet.Show();
         }
 
         private void lblAppointment_MouseEnter(object sender, EventArgs e)

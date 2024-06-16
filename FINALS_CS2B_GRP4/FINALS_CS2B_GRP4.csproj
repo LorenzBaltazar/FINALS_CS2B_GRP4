@@ -98,6 +98,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreatePetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatePetForm.Designer.cs">
+      <DependentUpon>CreatePetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManagePetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagePetForm.Designer.cs">
+      <DependentUpon>ManagePetForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceRefreshable.cs" />
     <Compile Include="CreateVetForm.cs">
       <SubType>Form</SubType>
@@ -146,14 +158,29 @@
     <Compile Include="OwnerViewForm.Designer.cs">
       <DependentUpon>OwnerViewForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PetViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetViewForm.Designer.cs">
+      <DependentUpon>PetViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectOwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectOwnerForm.Designer.cs">
+      <DependentUpon>SelectOwnerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="VetViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VetViewForm.Designer.cs">
       <DependentUpon>VetViewForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CreatePetForm.resx">
+      <DependentUpon>CreatePetForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateVetForm.resx">
       <DependentUpon>CreateVetForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManagePetForm.resx">
+      <DependentUpon>ManagePetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageVetForm.resx">
       <DependentUpon>ManageVetForm.cs</DependentUpon>
@@ -175,10 +205,16 @@
     <EmbeddedResource Include="OwnerViewForm.resx">
       <DependentUpon>OwnerViewForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PetViewForm.resx">
+      <DependentUpon>PetViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectOwnerForm.resx">
+      <DependentUpon>SelectOwnerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VetViewForm.resx">
       <DependentUpon>VetViewForm.cs</DependentUpon>
