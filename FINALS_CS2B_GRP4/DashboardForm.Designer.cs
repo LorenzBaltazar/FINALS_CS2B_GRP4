@@ -40,12 +40,14 @@
             this.lblOwners = new System.Windows.Forms.Label();
             this.lblVet = new System.Windows.Forms.Label();
             this.lblAppointment = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picVet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPets)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwners)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAppointment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl
@@ -62,7 +64,7 @@
             this.pnl.Controls.Add(this.lblVet);
             this.pnl.Controls.Add(this.lblAppointment);
             this.pnl.Location = new System.Drawing.Point(-4, -3);
-            this.pnl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnl.Margin = new System.Windows.Forms.Padding(2);
             this.pnl.Name = "pnl";
             this.pnl.Size = new System.Drawing.Size(201, 458);
             this.pnl.TabIndex = 0;
@@ -71,7 +73,7 @@
             // 
             this.picLogout.Image = global::FINALS_CS2B_GRP4.Properties.Resources.logout;
             this.picLogout.Location = new System.Drawing.Point(117, 418);
-            this.picLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picLogout.Margin = new System.Windows.Forms.Padding(2);
             this.picLogout.Name = "picLogout";
             this.picLogout.Size = new System.Drawing.Size(27, 28);
             this.picLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -99,7 +101,7 @@
             // 
             this.picVet.Image = ((System.Drawing.Image)(resources.GetObject("picVet.Image")));
             this.picVet.Location = new System.Drawing.Point(26, 141);
-            this.picVet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picVet.Margin = new System.Windows.Forms.Padding(2);
             this.picVet.Name = "picVet";
             this.picVet.Size = new System.Drawing.Size(52, 54);
             this.picVet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +112,7 @@
             // 
             this.picPets.Image = ((System.Drawing.Image)(resources.GetObject("picPets.Image")));
             this.picPets.Location = new System.Drawing.Point(32, 316);
-            this.picPets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picPets.Margin = new System.Windows.Forms.Padding(2);
             this.picPets.Name = "picPets";
             this.picPets.Size = new System.Drawing.Size(39, 41);
             this.picPets.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -121,7 +123,7 @@
             // 
             this.picOwners.Image = ((System.Drawing.Image)(resources.GetObject("picOwners.Image")));
             this.picOwners.Location = new System.Drawing.Point(32, 232);
-            this.picOwners.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picOwners.Margin = new System.Windows.Forms.Padding(2);
             this.picOwners.Name = "picOwners";
             this.picOwners.Size = new System.Drawing.Size(39, 41);
             this.picOwners.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +134,7 @@
             // 
             this.picAppointment.Image = global::FINALS_CS2B_GRP4.Properties.Resources.appointment;
             this.picAppointment.Location = new System.Drawing.Point(32, 66);
-            this.picAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.picAppointment.Name = "picAppointment";
             this.picAppointment.Size = new System.Drawing.Size(39, 41);
             this.picAppointment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,11 +209,22 @@
             this.lblAppointment.MouseEnter += new System.EventHandler(this.lblAppointment_MouseEnter);
             this.lblAppointment.MouseLeave += new System.EventHandler(this.lblAppointment_MouseLeave);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FINALS_CS2B_GRP4.Properties.Resources.logo2x;
+            this.pictureBox1.Location = new System.Drawing.Point(194, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(604, 446);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pnl);
             this.MaximizeBox = false;
             this.Name = "frmDashboard";
@@ -224,6 +237,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picPets)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picOwners)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAppointment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -241,5 +255,6 @@
         private System.Windows.Forms.PictureBox picVet;
         private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.PictureBox picLogout;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
