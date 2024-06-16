@@ -51,10 +51,10 @@
             this.btnCreate.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnCreate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreate.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCreate.Location = new System.Drawing.Point(329, 158);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreate.Location = new System.Drawing.Point(439, 194);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(56, 25);
+            this.btnCreate.Size = new System.Drawing.Size(75, 31);
             this.btnCreate.TabIndex = 41;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -64,10 +64,9 @@
             // 
             this.lblBirthDate.AutoSize = true;
             this.lblBirthDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthDate.Location = new System.Drawing.Point(20, 101);
-            this.lblBirthDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBirthDate.Location = new System.Drawing.Point(27, 124);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(65, 14);
+            this.lblBirthDate.Size = new System.Drawing.Size(74, 18);
             this.lblBirthDate.TabIndex = 39;
             this.lblBirthDate.Text = "Birth Date:";
             // 
@@ -75,10 +74,9 @@
             // 
             this.lblOwner.AutoSize = true;
             this.lblOwner.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOwner.Location = new System.Drawing.Point(20, 129);
-            this.lblOwner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOwner.Location = new System.Drawing.Point(27, 159);
             this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(45, 14);
+            this.lblOwner.Size = new System.Drawing.Size(54, 18);
             this.lblOwner.TabIndex = 40;
             this.lblOwner.Text = "Owner:";
             // 
@@ -86,9 +84,10 @@
             // 
             this.pblogo.BackgroundImage = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pblogo.Location = new System.Drawing.Point(23, 150);
+            this.pblogo.Location = new System.Drawing.Point(31, 185);
+            this.pblogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(58, 33);
+            this.pblogo.Size = new System.Drawing.Size(77, 41);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 42;
             this.pblogo.TabStop = false;
@@ -98,10 +97,10 @@
             this.btnClear.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnClear.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnClear.Location = new System.Drawing.Point(389, 158);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClear.Location = new System.Drawing.Point(519, 194);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(56, 25);
+            this.btnClear.Size = new System.Drawing.Size(75, 31);
             this.btnClear.TabIndex = 43;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -109,9 +108,10 @@
             // 
             // dtpBirthDate
             // 
-            this.dtpBirthDate.Location = new System.Drawing.Point(111, 100);
+            this.dtpBirthDate.Location = new System.Drawing.Point(148, 123);
+            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpBirthDate.Size = new System.Drawing.Size(265, 22);
             this.dtpBirthDate.TabIndex = 44;
             // 
             // btnSelect
@@ -119,10 +119,10 @@
             this.btnSelect.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnSelect.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSelect.Location = new System.Drawing.Point(111, 123);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSelect.Location = new System.Drawing.Point(148, 151);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(53, 25);
+            this.btnSelect.Size = new System.Drawing.Size(71, 31);
             this.btnSelect.TabIndex = 45;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -132,10 +132,10 @@
             // 
             this.txtOwner.Enabled = false;
             this.txtOwner.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOwner.Location = new System.Drawing.Point(201, 125);
-            this.txtOwner.Margin = new System.Windows.Forms.Padding(2);
+            this.txtOwner.Location = new System.Drawing.Point(268, 154);
+            this.txtOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtOwner.Name = "txtOwner";
-            this.txtOwner.Size = new System.Drawing.Size(241, 22);
+            this.txtOwner.Size = new System.Drawing.Size(320, 26);
             this.txtOwner.TabIndex = 46;
             // 
             // btnClearOwner
@@ -143,10 +143,10 @@
             this.btnClearOwner.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnClearOwner.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearOwner.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnClearOwner.Location = new System.Drawing.Point(168, 123);
-            this.btnClearOwner.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearOwner.Location = new System.Drawing.Point(224, 151);
+            this.btnClearOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClearOwner.Name = "btnClearOwner";
-            this.btnClearOwner.Size = new System.Drawing.Size(29, 25);
+            this.btnClearOwner.Size = new System.Drawing.Size(39, 31);
             this.btnClearOwner.TabIndex = 47;
             this.btnClearOwner.Text = "X";
             this.btnClearOwner.UseVisualStyleBackColor = false;
@@ -156,10 +156,9 @@
             // 
             this.lblPetName.AutoSize = true;
             this.lblPetName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetName.Location = new System.Drawing.Point(20, 28);
-            this.lblPetName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPetName.Location = new System.Drawing.Point(27, 34);
             this.lblPetName.Name = "lblPetName";
-            this.lblPetName.Size = new System.Drawing.Size(62, 14);
+            this.lblPetName.Size = new System.Drawing.Size(73, 18);
             this.lblPetName.TabIndex = 35;
             this.lblPetName.Text = "Pet Name:";
             // 
@@ -167,10 +166,9 @@
             // 
             this.lblSpecies.AutoSize = true;
             this.lblSpecies.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.Location = new System.Drawing.Point(20, 52);
-            this.lblSpecies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpecies.Location = new System.Drawing.Point(27, 64);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(52, 14);
+            this.lblSpecies.Size = new System.Drawing.Size(59, 18);
             this.lblSpecies.TabIndex = 37;
             this.lblSpecies.Text = "Species:";
             // 
@@ -178,45 +176,44 @@
             // 
             this.lblBreed.AutoSize = true;
             this.lblBreed.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreed.Location = new System.Drawing.Point(20, 77);
-            this.lblBreed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBreed.Location = new System.Drawing.Point(27, 95);
             this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(42, 14);
+            this.lblBreed.Size = new System.Drawing.Size(49, 18);
             this.lblBreed.TabIndex = 38;
             this.lblBreed.Text = "Breed:";
             // 
             // txtPetName
             // 
             this.txtPetName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPetName.Location = new System.Drawing.Point(111, 25);
-            this.txtPetName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPetName.Location = new System.Drawing.Point(148, 31);
+            this.txtPetName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPetName.Name = "txtPetName";
-            this.txtPetName.Size = new System.Drawing.Size(331, 22);
+            this.txtPetName.Size = new System.Drawing.Size(440, 26);
             this.txtPetName.TabIndex = 31;
             // 
             // txtSpecies
             // 
             this.txtSpecies.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpecies.Location = new System.Drawing.Point(111, 49);
-            this.txtSpecies.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSpecies.Location = new System.Drawing.Point(148, 60);
+            this.txtSpecies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSpecies.Name = "txtSpecies";
-            this.txtSpecies.Size = new System.Drawing.Size(331, 22);
+            this.txtSpecies.Size = new System.Drawing.Size(440, 26);
             this.txtSpecies.TabIndex = 32;
             // 
             // txtBreed
             // 
             this.txtBreed.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBreed.Location = new System.Drawing.Point(111, 73);
-            this.txtBreed.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBreed.Location = new System.Drawing.Point(148, 90);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(331, 22);
+            this.txtBreed.Size = new System.Drawing.Size(440, 26);
             this.txtBreed.TabIndex = 33;
             // 
             // CreatePetForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(464, 211);
+            this.ClientSize = new System.Drawing.Size(619, 260);
             this.Controls.Add(this.btnClearOwner);
             this.Controls.Add(this.txtOwner);
             this.Controls.Add(this.btnSelect);
@@ -232,7 +229,9 @@
             this.Controls.Add(this.lblSpecies);
             this.Controls.Add(this.lblPetName);
             this.Controls.Add(this.btnCreate);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "CreatePetForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Create Pet";
             this.Load += new System.EventHandler(this.CreatePetForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();

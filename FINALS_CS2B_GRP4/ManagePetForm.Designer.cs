@@ -41,9 +41,10 @@
             // 
             this.pblogo.BackgroundImage = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pblogo.Location = new System.Drawing.Point(12, 10);
+            this.pblogo.Location = new System.Drawing.Point(16, 12);
+            this.pblogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(58, 33);
+            this.pblogo.Size = new System.Drawing.Size(77, 41);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 15;
             this.pblogo.TabStop = false;
@@ -53,10 +54,10 @@
             this.btnView.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnView.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnView.Location = new System.Drawing.Point(366, 290);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnView.Location = new System.Drawing.Point(488, 357);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(63, 28);
+            this.btnView.Size = new System.Drawing.Size(84, 34);
             this.btnView.TabIndex = 12;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
@@ -67,10 +68,10 @@
             this.btnCreateVet.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnCreateVet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateVet.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCreateVet.Location = new System.Drawing.Point(450, 290);
-            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateVet.Location = new System.Drawing.Point(600, 357);
+            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateVet.Name = "btnCreateVet";
-            this.btnCreateVet.Size = new System.Drawing.Size(63, 28);
+            this.btnCreateVet.Size = new System.Drawing.Size(84, 34);
             this.btnCreateVet.TabIndex = 14;
             this.btnCreateVet.Text = "Create";
             this.btnCreateVet.UseVisualStyleBackColor = false;
@@ -81,10 +82,9 @@
             this.lblPet.AutoSize = true;
             this.lblPet.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPet.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lblPet.Location = new System.Drawing.Point(224, 21);
-            this.lblPet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPet.Location = new System.Drawing.Point(299, 26);
             this.lblPet.Name = "lblPet";
-            this.lblPet.Size = new System.Drawing.Size(63, 33);
+            this.lblPet.Size = new System.Drawing.Size(75, 40);
             this.lblPet.TabIndex = 13;
             this.lblPet.Text = "Pets";
             // 
@@ -95,26 +95,28 @@
             this.dgPetList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgPetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgPetList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgPetList.Location = new System.Drawing.Point(11, 70);
-            this.dgPetList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgPetList.Location = new System.Drawing.Point(15, 86);
+            this.dgPetList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgPetList.Name = "dgPetList";
             this.dgPetList.ReadOnly = true;
             this.dgPetList.RowHeadersWidth = 51;
             this.dgPetList.RowTemplate.Height = 24;
-            this.dgPetList.Size = new System.Drawing.Size(508, 198);
+            this.dgPetList.Size = new System.Drawing.Size(677, 244);
             this.dgPetList.TabIndex = 11;
             // 
             // frmManagePet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 331);
+            this.ClientSize = new System.Drawing.Size(708, 407);
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnCreateVet);
             this.Controls.Add(this.lblPet);
             this.Controls.Add(this.dgPetList);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManagePet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pets";
             this.Load += new System.EventHandler(this.frmManagePet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
