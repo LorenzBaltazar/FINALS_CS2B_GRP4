@@ -42,10 +42,10 @@
             this.btnView.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnView.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnView.Location = new System.Drawing.Point(523, 281);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2);
+            this.btnView.Location = new System.Drawing.Point(697, 346);
+            this.btnView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(63, 28);
+            this.btnView.Size = new System.Drawing.Size(84, 34);
             this.btnView.TabIndex = 17;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
@@ -56,10 +56,10 @@
             this.btnCreateVet.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnCreateVet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateVet.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCreateVet.Location = new System.Drawing.Point(607, 281);
-            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreateVet.Location = new System.Drawing.Point(809, 346);
+            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateVet.Name = "btnCreateVet";
-            this.btnCreateVet.Size = new System.Drawing.Size(63, 28);
+            this.btnCreateVet.Size = new System.Drawing.Size(84, 34);
             this.btnCreateVet.TabIndex = 19;
             this.btnCreateVet.Text = "Create";
             this.btnCreateVet.UseVisualStyleBackColor = false;
@@ -70,10 +70,9 @@
             this.lblAppointment.AutoSize = true;
             this.lblAppointment.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAppointment.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lblAppointment.Location = new System.Drawing.Point(259, 19);
-            this.lblAppointment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAppointment.Location = new System.Drawing.Point(345, 23);
             this.lblAppointment.Name = "lblAppointment";
-            this.lblAppointment.Size = new System.Drawing.Size(174, 33);
+            this.lblAppointment.Size = new System.Drawing.Size(214, 40);
             this.lblAppointment.TabIndex = 18;
             this.lblAppointment.Text = "Appointments";
             // 
@@ -84,37 +83,40 @@
             this.dgAppointmentList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgAppointmentList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgAppointmentList.Location = new System.Drawing.Point(11, 69);
-            this.dgAppointmentList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgAppointmentList.Location = new System.Drawing.Point(15, 85);
+            this.dgAppointmentList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgAppointmentList.Name = "dgAppointmentList";
             this.dgAppointmentList.ReadOnly = true;
             this.dgAppointmentList.RowHeadersWidth = 51;
             this.dgAppointmentList.RowTemplate.Height = 24;
-            this.dgAppointmentList.Size = new System.Drawing.Size(659, 198);
+            this.dgAppointmentList.Size = new System.Drawing.Size(879, 244);
             this.dgAppointmentList.TabIndex = 16;
             // 
             // pblogo
             // 
             this.pblogo.BackgroundImage = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pblogo.Location = new System.Drawing.Point(12, 9);
+            this.pblogo.Location = new System.Drawing.Point(16, 11);
+            this.pblogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(58, 33);
+            this.pblogo.Size = new System.Drawing.Size(77, 41);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 20;
             this.pblogo.TabStop = false;
             // 
             // frmManageAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(688, 318);
+            this.ClientSize = new System.Drawing.Size(917, 391);
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnCreateVet);
             this.Controls.Add(this.lblAppointment);
             this.Controls.Add(this.dgAppointmentList);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManageAppointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointments";
             this.Load += new System.EventHandler(this.frmManageAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgAppointmentList)).EndInit();

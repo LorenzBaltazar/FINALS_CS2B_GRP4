@@ -41,9 +41,10 @@
             // 
             this.pblogo.BackgroundImage = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pblogo.Location = new System.Drawing.Point(7, 11);
+            this.pblogo.Location = new System.Drawing.Point(9, 14);
+            this.pblogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(58, 33);
+            this.pblogo.Size = new System.Drawing.Size(77, 41);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 9;
             this.pblogo.TabStop = false;
@@ -53,9 +54,10 @@
             this.btnView.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnView.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnView.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnView.Location = new System.Drawing.Point(380, 289);
+            this.btnView.Location = new System.Drawing.Point(507, 356);
+            this.btnView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(68, 27);
+            this.btnView.Size = new System.Drawing.Size(91, 33);
             this.btnView.TabIndex = 7;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
@@ -66,9 +68,10 @@
             this.btnCreate.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnCreate.Font = new System.Drawing.Font("Calibri", 12F);
             this.btnCreate.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnCreate.Location = new System.Drawing.Point(480, 289);
+            this.btnCreate.Location = new System.Drawing.Point(640, 356);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(73, 27);
+            this.btnCreate.Size = new System.Drawing.Size(97, 33);
             this.btnCreate.TabIndex = 6;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = false;
@@ -81,9 +84,11 @@
             this.dgOwnerList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgOwnerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgOwnerList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgOwnerList.Location = new System.Drawing.Point(16, 51);
+            this.dgOwnerList.Location = new System.Drawing.Point(21, 63);
+            this.dgOwnerList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgOwnerList.Name = "dgOwnerList";
-            this.dgOwnerList.Size = new System.Drawing.Size(537, 222);
+            this.dgOwnerList.RowHeadersWidth = 51;
+            this.dgOwnerList.Size = new System.Drawing.Size(716, 273);
             this.dgOwnerList.TabIndex = 5;
             // 
             // lblOwner
@@ -91,24 +96,25 @@
             this.lblOwner.AutoSize = true;
             this.lblOwner.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOwner.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lblOwner.Location = new System.Drawing.Point(225, 11);
-            this.lblOwner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblOwner.Location = new System.Drawing.Point(300, 14);
             this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(102, 33);
+            this.lblOwner.Size = new System.Drawing.Size(124, 40);
             this.lblOwner.TabIndex = 10;
             this.lblOwner.Text = "Owners";
             // 
             // frmManageOwner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(565, 326);
+            this.ClientSize = new System.Drawing.Size(753, 401);
             this.Controls.Add(this.lblOwner);
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dgOwnerList);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmManageOwner";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Owners";
             this.Load += new System.EventHandler(this.frmManageOwner_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
