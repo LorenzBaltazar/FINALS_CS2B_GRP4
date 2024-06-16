@@ -59,6 +59,10 @@ namespace FINALS_CS2B_GRP4
                 DialogResult = DialogResult.OK;
                 this.Close();
             }
+            else
+            {
+                MessageBox.Show("There was no selected pets to view.");
+            }
         }
     }
 }
