@@ -17,10 +17,26 @@ namespace FINALS_CS2B_GRP4
         int? ownerId;
         int? petId;
         int? vetId;
-        public frmViewAppointment(IRefreshable refreshable, Appointment appointment)
+        public frmViewAppointment(IRefreshable refreshable, Appointment appointment, string owner_name, string pet_name, string vet_name)
         {
             this.refreshable = refreshable;
             InitializeComponent();
+
+            appointmentId = appointment.AppointmentId;
+            ownerId = appointment.OwnerId;
+            petId = appointment.PetId;
+            vetId = appointment.VetId;
+            txtAppoinmentID.Text = appointment.AppointmentId.ToString();
+            txtOwner.Text = owner_name;
+            txtPet.Text = pet_name;
+            txtVet.Text = vet_name;
+            txtReason.Text = appointment.Reason;
+            dtpDate.Value = appointment.AppointmentDate ?? DateTime.Now;
+            if (appointment.AppointmentTime is null)
+                dtpTime.Value = DateTime.Now;
+            else
+                dtpTime.Value = DateTime.Now.Date + (TimeSpan) appointment.AppointmentTime;
+
         }
 
         private void btnSelectOwner_Click(object sender, EventArgs e)

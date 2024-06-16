@@ -97,10 +97,13 @@ namespace FINALS_CS2B_GRP4
             {
                 DataGridViewRow row = dgAppointmentList.SelectedRows[0];
                 int appointmentId = Convert.ToInt32(row.Cells["appointment_id"].Value);
+                string owner_name = row.Cells["owner_name"].Value.ToString();
+                string pet_name = row.Cells["pet_name"].Value.ToString();
+                string vet_name = row.Cells["vet_name"].Value.ToString();
 
                 Appointment appointment = DatabaseHelper.ReadAppointment(appointmentId);
 
-                frmViewAppointment appointmentView = new frmViewAppointment(this, appointment);
+                frmViewAppointment appointmentView = new frmViewAppointment(this, appointment, owner_name, pet_name, vet_name);
                 appointmentView.Show();
             }
             else
