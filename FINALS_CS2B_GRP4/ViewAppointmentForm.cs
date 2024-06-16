@@ -31,6 +31,7 @@ namespace FINALS_CS2B_GRP4
             txtPet.Text = pet_name;
             txtVet.Text = vet_name;
             txtReason.Text = appointment.Reason;
+            txtStatus.Text = appointment.Status;
             dtpDate.Value = appointment.AppointmentDate ?? DateTime.Now;
             if (appointment.AppointmentTime is null)
                 dtpTime.Value = DateTime.Now;
@@ -120,7 +121,7 @@ namespace FINALS_CS2B_GRP4
                 OwnerId = ownerId,
                 PetId = petId,
                 VetId = vetId,
-                Status = "Scheduled"
+                Status = txtStatus.Text
             };
 
             DatabaseHelper.UpdateAppointment(appointment);
