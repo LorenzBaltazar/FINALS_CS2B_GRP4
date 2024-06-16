@@ -55,22 +55,12 @@ namespace FINALS_CS2B_GRP4
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure? (This will delete related pets and appointments)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
             {
-                List<Pet> owner_pets = DatabaseHelper.SelectPetsByOwnerList(ownerID);
-                if (owner_pets.Count > 0)
-                {
-                    DialogResult pets_result = MessageBox.Show("Owner has pets. Do you want to delete the pets too?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                    if (pets_result == DialogResult.Yes)
-                    {
-                        foreach (Pet pet in owner_pets)
-                        {
-                            DatabaseHelper.DeletePet(pet.PetId);
-                        }
-                    }
-                }
+                DatabaseHelper.DeleteAppointmentsByOwner(ownerID);
+                DatabaseHelper.DeletePetsByOwner(ownerID);
                 DatabaseHelper.DeleteOwner(ownerID);
                 MessageBox.Show("Successfully Deleted.");
                 if (parentForm is IRefreshable)

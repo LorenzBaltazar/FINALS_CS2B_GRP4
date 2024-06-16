@@ -105,6 +105,41 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
+
+        public static void DeleteAppointmentsByVeterinarian(int vetId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "DELETE FROM veterinarians WHERE vet_id = @VetId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@VetId", vetId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+         public static void DeleteAppointmentsByOwner(int ownerId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "DELETE FROM appointments WHERE owner_id = @OwnerId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OwnerId", ownerId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public static void DeleteAppointmentsByPet(int petId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "DELETE FROM appointments WHERE pet_id = @PetId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PetId", petId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
 		
 		public static DataTable SelectAllOwners()
         {
@@ -326,6 +361,18 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
+
+        public static void DeletePetsByOwner(int ownerId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "DELETE FROM pets WHERE owner_id = @OwnerId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@OwnerId", ownerId);
+                connection.Open();
+                command.ExecuteNonQuery();
+            }
+        }
 		
 		public static DataTable SelectAllVeterinarians()
         {
@@ -402,6 +449,7 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
+
 
         public static void DeleteVeterinarian(int vetId)
         {

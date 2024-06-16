@@ -66,10 +66,11 @@ namespace FINALS_CS2B_GRP4
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Are you sure? (This will delete related appointments)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
             {
+                DatabaseHelper.DeleteAppointmentsByVeterinarian(vetID);
                 DatabaseHelper.DeleteVeterinarian(vetID);
                 MessageBox.Show("Successfully Deleted.");
                 if (parentForm is IRefreshable)
