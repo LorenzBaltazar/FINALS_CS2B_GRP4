@@ -28,6 +28,23 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        public static DataTable SelectAppointmentsByPet(int petId)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                var query = "SELECT * FROM appointments WHERE pet_id = @PetId";
+                var command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@PetId", petId);
+                var dataTable = new DataTable();
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    dataTable.Load(reader);
+                }
+                return dataTable;
+            }
+        }
+
         public static void CreateAppointment(Appointment appointment)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -110,7 +127,7 @@ namespace FINALS_CS2B_GRP4
         {
             using (var connection = new MySqlConnection(connectionString))
             {
-                var query = "DELETE FROM veterinarians WHERE vet_id = @VetId";
+                var query = "DELETE FROM appointments WHERE vet_id = @VetId";
                 var command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@VetId", vetId);
                 connection.Open();

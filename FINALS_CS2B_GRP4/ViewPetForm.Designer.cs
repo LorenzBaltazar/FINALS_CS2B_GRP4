@@ -45,7 +45,11 @@
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.txtPetID = new System.Windows.Forms.TextBox();
             this.lblPetID = new System.Windows.Forms.Label();
+            this.btnViewAppointment = new System.Windows.Forms.Button();
+            this.dgAppointmentList = new System.Windows.Forms.DataGridView();
+            this.lblAppointment = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAppointmentList)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClearOwner
@@ -53,10 +57,10 @@
             this.btnClearOwner.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnClearOwner.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClearOwner.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnClearOwner.Location = new System.Drawing.Point(225, 167);
-            this.btnClearOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnClearOwner.Location = new System.Drawing.Point(169, 136);
+            this.btnClearOwner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClearOwner.Name = "btnClearOwner";
-            this.btnClearOwner.Size = new System.Drawing.Size(39, 31);
+            this.btnClearOwner.Size = new System.Drawing.Size(29, 25);
             this.btnClearOwner.TabIndex = 62;
             this.btnClearOwner.Text = "X";
             this.btnClearOwner.UseVisualStyleBackColor = false;
@@ -66,10 +70,10 @@
             // 
             this.txtOwner.Enabled = false;
             this.txtOwner.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOwner.Location = new System.Drawing.Point(269, 170);
-            this.txtOwner.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtOwner.Location = new System.Drawing.Point(202, 138);
+            this.txtOwner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtOwner.Name = "txtOwner";
-            this.txtOwner.Size = new System.Drawing.Size(320, 26);
+            this.txtOwner.Size = new System.Drawing.Size(241, 22);
             this.txtOwner.TabIndex = 61;
             // 
             // btnSelect
@@ -77,10 +81,10 @@
             this.btnSelect.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnSelect.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelect.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnSelect.Location = new System.Drawing.Point(149, 167);
-            this.btnSelect.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSelect.Location = new System.Drawing.Point(112, 136);
+            this.btnSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(71, 31);
+            this.btnSelect.Size = new System.Drawing.Size(53, 25);
             this.btnSelect.TabIndex = 60;
             this.btnSelect.Text = "Select";
             this.btnSelect.UseVisualStyleBackColor = false;
@@ -88,10 +92,9 @@
             // 
             // dtpBirthDate
             // 
-            this.dtpBirthDate.Location = new System.Drawing.Point(149, 139);
-            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpBirthDate.Location = new System.Drawing.Point(112, 113);
             this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(265, 22);
+            this.dtpBirthDate.Size = new System.Drawing.Size(200, 20);
             this.dtpBirthDate.TabIndex = 59;
             // 
             // btnDelete
@@ -99,10 +102,10 @@
             this.btnDelete.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnDelete.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDelete.Location = new System.Drawing.Point(520, 210);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(390, 171);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 31);
+            this.btnDelete.Size = new System.Drawing.Size(56, 25);
             this.btnDelete.TabIndex = 58;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -111,37 +114,38 @@
             // txtBreed
             // 
             this.txtBreed.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBreed.Location = new System.Drawing.Point(149, 106);
-            this.txtBreed.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtBreed.Location = new System.Drawing.Point(112, 86);
+            this.txtBreed.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtBreed.Name = "txtBreed";
-            this.txtBreed.Size = new System.Drawing.Size(440, 26);
+            this.txtBreed.Size = new System.Drawing.Size(331, 22);
             this.txtBreed.TabIndex = 50;
             // 
             // txtSpecies
             // 
             this.txtSpecies.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSpecies.Location = new System.Drawing.Point(149, 76);
-            this.txtSpecies.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSpecies.Location = new System.Drawing.Point(112, 62);
+            this.txtSpecies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSpecies.Name = "txtSpecies";
-            this.txtSpecies.Size = new System.Drawing.Size(440, 26);
+            this.txtSpecies.Size = new System.Drawing.Size(331, 22);
             this.txtSpecies.TabIndex = 49;
             // 
             // txtPetName
             // 
             this.txtPetName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPetName.Location = new System.Drawing.Point(149, 47);
-            this.txtPetName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPetName.Location = new System.Drawing.Point(112, 38);
+            this.txtPetName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPetName.Name = "txtPetName";
-            this.txtPetName.Size = new System.Drawing.Size(440, 26);
+            this.txtPetName.Size = new System.Drawing.Size(331, 22);
             this.txtPetName.TabIndex = 48;
             // 
             // lblOwner
             // 
             this.lblOwner.AutoSize = true;
             this.lblOwner.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOwner.Location = new System.Drawing.Point(28, 175);
+            this.lblOwner.Location = new System.Drawing.Point(21, 142);
+            this.lblOwner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(54, 18);
+            this.lblOwner.Size = new System.Drawing.Size(45, 14);
             this.lblOwner.TabIndex = 55;
             this.lblOwner.Text = "Owner:";
             // 
@@ -149,9 +153,10 @@
             // 
             this.lblBirthDate.AutoSize = true;
             this.lblBirthDate.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthDate.Location = new System.Drawing.Point(28, 140);
+            this.lblBirthDate.Location = new System.Drawing.Point(21, 114);
+            this.lblBirthDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthDate.Name = "lblBirthDate";
-            this.lblBirthDate.Size = new System.Drawing.Size(74, 18);
+            this.lblBirthDate.Size = new System.Drawing.Size(65, 14);
             this.lblBirthDate.TabIndex = 54;
             this.lblBirthDate.Text = "Birth Date:";
             // 
@@ -159,9 +164,10 @@
             // 
             this.lblBreed.AutoSize = true;
             this.lblBreed.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBreed.Location = new System.Drawing.Point(28, 111);
+            this.lblBreed.Location = new System.Drawing.Point(21, 90);
+            this.lblBreed.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBreed.Name = "lblBreed";
-            this.lblBreed.Size = new System.Drawing.Size(49, 18);
+            this.lblBreed.Size = new System.Drawing.Size(42, 14);
             this.lblBreed.TabIndex = 53;
             this.lblBreed.Text = "Breed:";
             // 
@@ -169,9 +175,10 @@
             // 
             this.lblSpecies.AutoSize = true;
             this.lblSpecies.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecies.Location = new System.Drawing.Point(28, 80);
+            this.lblSpecies.Location = new System.Drawing.Point(21, 65);
+            this.lblSpecies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSpecies.Name = "lblSpecies";
-            this.lblSpecies.Size = new System.Drawing.Size(59, 18);
+            this.lblSpecies.Size = new System.Drawing.Size(52, 14);
             this.lblSpecies.TabIndex = 52;
             this.lblSpecies.Text = "Species:";
             // 
@@ -179,9 +186,10 @@
             // 
             this.lblPetName.AutoSize = true;
             this.lblPetName.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetName.Location = new System.Drawing.Point(28, 50);
+            this.lblPetName.Location = new System.Drawing.Point(21, 41);
+            this.lblPetName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPetName.Name = "lblPetName";
-            this.lblPetName.Size = new System.Drawing.Size(73, 18);
+            this.lblPetName.Size = new System.Drawing.Size(62, 14);
             this.lblPetName.TabIndex = 51;
             this.lblPetName.Text = "Pet Name:";
             // 
@@ -190,10 +198,10 @@
             this.btnUpdate.BackColor = System.Drawing.Color.LightSlateGray;
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnUpdate.Location = new System.Drawing.Point(416, 210);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Location = new System.Drawing.Point(312, 171);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(85, 31);
+            this.btnUpdate.Size = new System.Drawing.Size(64, 25);
             this.btnUpdate.TabIndex = 56;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -203,10 +211,9 @@
             // 
             this.pblogo.BackgroundImage = global::FINALS_CS2B_GRP4.Properties.Resources.logo;
             this.pblogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pblogo.Location = new System.Drawing.Point(32, 201);
-            this.pblogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pblogo.Location = new System.Drawing.Point(24, 163);
             this.pblogo.Name = "pblogo";
-            this.pblogo.Size = new System.Drawing.Size(77, 41);
+            this.pblogo.Size = new System.Drawing.Size(58, 33);
             this.pblogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pblogo.TabIndex = 57;
             this.pblogo.TabStop = false;
@@ -215,27 +222,72 @@
             // 
             this.txtPetID.Enabled = false;
             this.txtPetID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPetID.Location = new System.Drawing.Point(149, 15);
-            this.txtPetID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPetID.Location = new System.Drawing.Point(112, 12);
+            this.txtPetID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPetID.Name = "txtPetID";
-            this.txtPetID.Size = new System.Drawing.Size(440, 26);
+            this.txtPetID.Size = new System.Drawing.Size(331, 22);
             this.txtPetID.TabIndex = 63;
             // 
             // lblPetID
             // 
             this.lblPetID.AutoSize = true;
             this.lblPetID.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetID.Location = new System.Drawing.Point(28, 18);
+            this.lblPetID.Location = new System.Drawing.Point(21, 15);
+            this.lblPetID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPetID.Name = "lblPetID";
-            this.lblPetID.Size = new System.Drawing.Size(49, 18);
+            this.lblPetID.Size = new System.Drawing.Size(42, 14);
             this.lblPetID.TabIndex = 64;
             this.lblPetID.Text = "Pet ID:";
             // 
+            // btnViewAppointment
+            // 
+            this.btnViewAppointment.BackColor = System.Drawing.Color.LightSlateGray;
+            this.btnViewAppointment.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewAppointment.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnViewAppointment.Location = new System.Drawing.Point(305, 239);
+            this.btnViewAppointment.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewAppointment.Name = "btnViewAppointment";
+            this.btnViewAppointment.Size = new System.Drawing.Size(141, 28);
+            this.btnViewAppointment.TabIndex = 66;
+            this.btnViewAppointment.Text = "View Appointment";
+            this.btnViewAppointment.UseVisualStyleBackColor = false;
+            this.btnViewAppointment.Click += new System.EventHandler(this.btnViewAppointment_Click);
+            // 
+            // dgAppointmentList
+            // 
+            this.dgAppointmentList.AllowUserToAddRows = false;
+            this.dgAppointmentList.AllowUserToDeleteRows = false;
+            this.dgAppointmentList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgAppointmentList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgAppointmentList.Location = new System.Drawing.Point(11, 271);
+            this.dgAppointmentList.Margin = new System.Windows.Forms.Padding(2);
+            this.dgAppointmentList.Name = "dgAppointmentList";
+            this.dgAppointmentList.ReadOnly = true;
+            this.dgAppointmentList.RowHeadersWidth = 51;
+            this.dgAppointmentList.RowTemplate.Height = 24;
+            this.dgAppointmentList.Size = new System.Drawing.Size(445, 198);
+            this.dgAppointmentList.TabIndex = 65;
+            // 
+            // lblAppointment
+            // 
+            this.lblAppointment.AutoSize = true;
+            this.lblAppointment.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppointment.Location = new System.Drawing.Point(18, 248);
+            this.lblAppointment.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAppointment.Name = "lblAppointment";
+            this.lblAppointment.Size = new System.Drawing.Size(87, 14);
+            this.lblAppointment.TabIndex = 67;
+            this.lblAppointment.Text = "Appointments:";
+            // 
             // frmPetView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 260);
+            this.ClientSize = new System.Drawing.Size(467, 480);
+            this.Controls.Add(this.lblAppointment);
+            this.Controls.Add(this.btnViewAppointment);
+            this.Controls.Add(this.dgAppointmentList);
             this.Controls.Add(this.txtPetID);
             this.Controls.Add(this.lblPetID);
             this.Controls.Add(this.btnClearOwner);
@@ -253,11 +305,12 @@
             this.Controls.Add(this.lblSpecies);
             this.Controls.Add(this.lblPetName);
             this.Controls.Add(this.btnUpdate);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPetView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "View Pet";
+            this.Load += new System.EventHandler(this.frmPetView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgAppointmentList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +335,8 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.TextBox txtPetID;
         private System.Windows.Forms.Label lblPetID;
+        private System.Windows.Forms.Button btnViewAppointment;
+        private System.Windows.Forms.DataGridView dgAppointmentList;
+        private System.Windows.Forms.Label lblAppointment;
     }
 }
