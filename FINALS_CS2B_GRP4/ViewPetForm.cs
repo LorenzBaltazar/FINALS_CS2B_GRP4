@@ -54,6 +54,7 @@ namespace FINALS_CS2B_GRP4
 
             if (result == DialogResult.Yes)
             {
+                DatabaseHelper.DeleteAppointmentsByPet(petId);
                 DatabaseHelper.DeletePet(petId);
                 MessageBox.Show("Successfully Deleted.");
                 if (parentForm is IRefreshable)
