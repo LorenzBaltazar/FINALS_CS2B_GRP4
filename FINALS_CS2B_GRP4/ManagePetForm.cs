@@ -25,7 +25,6 @@ namespace FINALS_CS2B_GRP4
 
         public void refreshDatagrid()
         {
-            Console.WriteLine("REFRESHED");
             DataTable dtPet = DatabaseHelper.SelectAllPets();
             dtPet.Columns.Add("owner_name", typeof(String));
 

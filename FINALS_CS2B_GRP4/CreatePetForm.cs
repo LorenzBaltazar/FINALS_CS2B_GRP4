@@ -27,7 +27,7 @@ namespace FINALS_CS2B_GRP4
             if (selectOwner.ShowDialog() == DialogResult.OK)
             {
                 Owner selectedOwner = selectOwner.selectedOwner;
-                txtOwner.Text = selectedOwner.OwnerId.ToString() + " : " + selectedOwner.LastName + ", " + selectedOwner.FirstName ;
+                txtOwner.Text = selectedOwner.LastName + ", " + selectedOwner.FirstName ;
                 ownerId = selectedOwner.OwnerId;
             }
             selectOwner.Dispose();
@@ -36,6 +36,7 @@ namespace FINALS_CS2B_GRP4
         private void btnClear_Click(object sender, EventArgs e)
         {
             ownerId = null;
+            dtpBirthDate.Value = DateTime.Now.Date;
             txtOwner.Text = "";
             txtBreed.Text = "";
             txtPetName.Text = "";

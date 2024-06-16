@@ -1,6 +1,6 @@
 ﻿namespace FINALS_CS2B_GRP4
 {
-    partial class frmSelectOwner
+    partial class frmSelectPet
     {
         /// <summary>
         /// Required designer variable.
@@ -28,26 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblOwner = new System.Windows.Forms.Label();
+            this.lblPet = new System.Windows.Forms.Label();
             this.pblogo = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSelect = new System.Windows.Forms.Button();
-            this.dgOwnerList = new System.Windows.Forms.DataGridView();
+            this.dgPetList = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgOwnerList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPetList)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblOwner
+            // lblPet
             // 
-            this.lblOwner.AutoSize = true;
-            this.lblOwner.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblOwner.ForeColor = System.Drawing.Color.LightSlateGray;
-            this.lblOwner.Location = new System.Drawing.Point(216, 12);
-            this.lblOwner.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblOwner.Name = "lblOwner";
-            this.lblOwner.Size = new System.Drawing.Size(165, 33);
-            this.lblOwner.TabIndex = 15;
-            this.lblOwner.Text = "Select Owner";
+            this.lblPet.AutoSize = true;
+            this.lblPet.Font = new System.Drawing.Font("Calibri", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPet.ForeColor = System.Drawing.Color.LightSlateGray;
+            this.lblPet.Location = new System.Drawing.Point(216, 12);
+            this.lblPet.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPet.Name = "lblPet";
+            this.lblPet.Size = new System.Drawing.Size(126, 33);
+            this.lblPet.TabIndex = 15;
+            this.lblPet.Text = "Select Pet";
             // 
             // pblogo
             // 
@@ -85,33 +85,33 @@
             this.btnSelect.UseVisualStyleBackColor = false;
             this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // dgOwnerList
+            // dgPetList
             // 
-            this.dgOwnerList.AllowUserToAddRows = false;
-            this.dgOwnerList.AllowUserToDeleteRows = false;
-            this.dgOwnerList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dgOwnerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgOwnerList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgOwnerList.Location = new System.Drawing.Point(25, 53);
-            this.dgOwnerList.Name = "dgOwnerList";
-            this.dgOwnerList.Size = new System.Drawing.Size(537, 222);
-            this.dgOwnerList.TabIndex = 11;
+            this.dgPetList.AllowUserToAddRows = false;
+            this.dgPetList.AllowUserToDeleteRows = false;
+            this.dgPetList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgPetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPetList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgPetList.Location = new System.Drawing.Point(25, 53);
+            this.dgPetList.Name = "dgPetList";
+            this.dgPetList.Size = new System.Drawing.Size(537, 222);
+            this.dgPetList.TabIndex = 11;
             // 
-            // frmSelectOwner
+            // frmSelectPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 333);
-            this.Controls.Add(this.lblOwner);
+            this.Controls.Add(this.lblPet);
             this.Controls.Add(this.pblogo);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.dgOwnerList);
-            this.Name = "frmSelectOwner";
-            this.Text = "Select Owner";
-            this.Load += new System.EventHandler(this.frmSelectOwner_Load);
+            this.Controls.Add(this.dgPetList);
+            this.Name = "frmSelectPet";
+            this.Text = "Select Pet";
+            this.Load += new System.EventHandler(this.frmSelectPet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgOwnerList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPetList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,10 +119,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblOwner;
+        private System.Windows.Forms.Label lblPet;
         private System.Windows.Forms.PictureBox pblogo;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.DataGridView dgOwnerList;
+        private System.Windows.Forms.DataGridView dgPetList;
     }
 }

@@ -98,11 +98,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ViewAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewAppointmentForm.Designer.cs">
+      <DependentUpon>ViewAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateAppointmentForm.Designer.cs">
+      <DependentUpon>CreateAppointmentForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreatePetForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreatePetForm.Designer.cs">
       <DependentUpon>CreatePetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageAppointmentForm.Designer.cs">
+      <DependentUpon>ManageAppointmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ManagePetForm.cs">
       <SubType>Form</SubType>
@@ -152,17 +170,29 @@
     <Compile Include="CreateOwnerForm.Designer.cs">
       <DependentUpon>CreateOwnerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OwnerViewForm.cs">
+    <Compile Include="SelectVetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OwnerViewForm.Designer.cs">
-      <DependentUpon>OwnerViewForm.cs</DependentUpon>
+    <Compile Include="SelectVetForm.Designer.cs">
+      <DependentUpon>SelectVetForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PetViewForm.cs">
+    <Compile Include="SelectPetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PetViewForm.Designer.cs">
-      <DependentUpon>PetViewForm.cs</DependentUpon>
+    <Compile Include="SelectPetForm.Designer.cs">
+      <DependentUpon>SelectPetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOwnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOwnerForm.Designer.cs">
+      <DependentUpon>ViewOwnerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPetForm.Designer.cs">
+      <DependentUpon>ViewPetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -172,12 +202,18 @@
     <Compile Include="SelectOwnerForm.Designer.cs">
       <DependentUpon>SelectOwnerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VetViewForm.cs">
+    <Compile Include="ViewVetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VetViewForm.Designer.cs">
-      <DependentUpon>VetViewForm.cs</DependentUpon>
+    <Compile Include="ViewVetForm.Designer.cs">
+      <DependentUpon>ViewVetForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ViewAppointmentForm.resx">
+      <DependentUpon>ViewAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateAppointmentForm.resx">
+      <DependentUpon>CreateAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreatePetForm.resx">
       <DependentUpon>CreatePetForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageAppointmentForm.resx">
+      <DependentUpon>ManageAppointmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagePetForm.resx">
       <DependentUpon>ManagePetForm.cs</DependentUpon>
@@ -202,11 +241,17 @@
     <EmbeddedResource Include="CreateOwnerForm.resx">
       <DependentUpon>CreateOwnerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OwnerViewForm.resx">
-      <DependentUpon>OwnerViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="SelectVetForm.resx">
+      <DependentUpon>SelectVetForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PetViewForm.resx">
-      <DependentUpon>PetViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="SelectPetForm.resx">
+      <DependentUpon>SelectPetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewOwnerForm.resx">
+      <DependentUpon>ViewOwnerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPetForm.resx">
+      <DependentUpon>ViewPetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -216,8 +261,8 @@
     <EmbeddedResource Include="SelectOwnerForm.resx">
       <DependentUpon>SelectOwnerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VetViewForm.resx">
-      <DependentUpon>VetViewForm.cs</DependentUpon>
+    <EmbeddedResource Include="ViewVetForm.resx">
+      <DependentUpon>ViewVetForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

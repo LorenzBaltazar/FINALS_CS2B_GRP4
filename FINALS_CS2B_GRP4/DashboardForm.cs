@@ -19,6 +19,8 @@ namespace FINALS_CS2B_GRP4
 
         private void lblAppointment_Click(object sender, EventArgs e)
         {
+            frmManageAppointment manageAppointment = new frmManageAppointment();
+            manageAppointment.Show();
 
         }
 

@@ -43,8 +43,9 @@
             this.dgVetList.AllowUserToDeleteRows = false;
             this.dgVetList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgVetList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgVetList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgVetList.Location = new System.Drawing.Point(11, 72);
-            this.dgVetList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgVetList.Margin = new System.Windows.Forms.Padding(2);
             this.dgVetList.Name = "dgVetList";
             this.dgVetList.ReadOnly = true;
             this.dgVetList.RowHeadersWidth = 51;
@@ -70,7 +71,7 @@
             this.btnCreateVet.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCreateVet.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnCreateVet.Location = new System.Drawing.Point(450, 292);
-            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateVet.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateVet.Name = "btnCreateVet";
             this.btnCreateVet.Size = new System.Drawing.Size(63, 28);
             this.btnCreateVet.TabIndex = 2;
@@ -84,7 +85,7 @@
             this.btnView.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.btnView.Location = new System.Drawing.Point(366, 292);
-            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(63, 28);
             this.btnView.TabIndex = 1;
@@ -113,7 +114,7 @@
             this.Controls.Add(this.btnCreateVet);
             this.Controls.Add(this.lblVet);
             this.Controls.Add(this.dgVetList);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "frmManageVet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

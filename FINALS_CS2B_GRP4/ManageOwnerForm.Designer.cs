@@ -80,6 +80,7 @@
             this.dgOwnerList.AllowUserToDeleteRows = false;
             this.dgOwnerList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgOwnerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgOwnerList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgOwnerList.Location = new System.Drawing.Point(16, 51);
             this.dgOwnerList.Name = "dgOwnerList";
             this.dgOwnerList.Size = new System.Drawing.Size(537, 222);
@@ -108,7 +109,7 @@
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.dgOwnerList);
             this.Name = "frmManageOwner";
-            this.Text = "Manage Owners";
+            this.Text = "Owners";
             this.Load += new System.EventHandler(this.frmManageOwner_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pblogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgOwnerList)).EndInit();

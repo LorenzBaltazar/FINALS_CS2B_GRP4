@@ -271,7 +271,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
-        public Pet ReadPet(int petId)
+        public static Pet ReadPet(int petId)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -359,7 +359,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
-        public Veterinarian ReadVeterinarian(int vetId)
+        public static Veterinarian ReadVeterinarian(int vetId)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
