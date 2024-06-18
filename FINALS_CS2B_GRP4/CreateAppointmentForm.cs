@@ -16,6 +16,7 @@ namespace FINALS_CS2B_GRP4
         int? ownerId;
         int? petId;
         int? vetId;
+
         public CreateAppointmentForm(IRefreshable refreshable)
         {
             this.refreshable = refreshable;
@@ -24,11 +25,12 @@ namespace FINALS_CS2B_GRP4
 
         private void btnSelectOwner_Click(object sender, EventArgs e)
         {
+            // Open the select owner form
             frmSelectOwner selectOwner = new frmSelectOwner();
             if (selectOwner.ShowDialog() == DialogResult.OK)
             {
                 Owner selectedOwner = selectOwner.selectedOwner;
-                txtOwner.Text = selectedOwner.LastName + ", " + selectedOwner.FirstName ;
+                txtOwner.Text = selectedOwner.LastName + ", " + selectedOwner.FirstName;
                 ownerId = selectedOwner.OwnerId;
             }
             selectOwner.Dispose();
@@ -36,6 +38,7 @@ namespace FINALS_CS2B_GRP4
 
         private void btnSelectPet_Click(object sender, EventArgs e)
         {
+            // Open the select pet form
             frmSelectPet selectPet = new frmSelectPet();
             if (selectPet.ShowDialog() == DialogResult.OK)
             {
@@ -48,11 +51,12 @@ namespace FINALS_CS2B_GRP4
 
         private void btnSelectVet_Click(object sender, EventArgs e)
         {
+            // Open the select veterinarian form
             frmSelectVet selectVet = new frmSelectVet();
             if (selectVet.ShowDialog() == DialogResult.OK)
             {
                 Veterinarian selectedVet = selectVet.selectedVet;
-                txtVet.Text = selectedVet.LastName + ", " + selectedVet.FirstName ;
+                txtVet.Text = selectedVet.LastName + ", " + selectedVet.FirstName;
                 vetId = selectedVet.VetId;
             }
             selectVet.Dispose();
@@ -61,12 +65,14 @@ namespace FINALS_CS2B_GRP4
 
         private void btnClearOwner_Click(object sender, EventArgs e)
         {
+            // Clear the owner text box and reset the owner ID
             txtOwner.Text = "";
             ownerId = null;
         }
 
         private void btnClearPet_Click(object sender, EventArgs e)
         {
+            // Clear the pet text box and reset the pet ID
             txtPet.Text = "";
             petId = null;
 
@@ -74,12 +80,14 @@ namespace FINALS_CS2B_GRP4
 
         private void btnClearVet_Click(object sender, EventArgs e)
         {
+            // Clear the veterinarian text box and reset the veterinarian ID
             txtVet.Text = "";
             vetId = null;
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Clear all input fields and reset all IDs
             txtReason.Text = "";
             txtOwner.Text = "";
             ownerId = null;
@@ -91,6 +99,7 @@ namespace FINALS_CS2B_GRP4
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            // Create a new appointment object with the selected values
             Appointment appointment = new Appointment
             {
                 AppointmentDate = dtpDate.Value.Date,
@@ -102,11 +111,18 @@ namespace FINALS_CS2B_GRP4
                 Status = "Scheduled"
             };
 
+            // Call the CreateAppointment method in the DatabaseHelper class
             DatabaseHelper.CreateAppointment(appointment);
+
+            // Show a success message
             MessageBox.Show("Successfully Created.");
+
+            // Refresh the data grid if the refreshable object is not null
             if (!(refreshable is null))
                 refreshable.refreshDatagrid();
-            this.Close();           
+
+            // Close the form
+            this.Close();
         }
     }
 }

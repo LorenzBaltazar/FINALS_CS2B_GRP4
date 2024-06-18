@@ -12,7 +12,8 @@ namespace FINALS_CS2B_GRP4
     {
         private static string connectionString = "server=localhost;user id=root;password=;database=vetis_db";
 
-		public static DataTable SelectAllAppointments()
+        // Select all appointments from the database
+        public static DataTable SelectAllAppointments()
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -28,6 +29,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Select appointments by pet ID from the database
         public static DataTable SelectAppointmentsByPet(int petId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -45,6 +47,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Create a new appointment in the database
         public static void CreateAppointment(Appointment appointment)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -63,6 +66,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Read an appointment by appointment ID from the database
         public static Appointment ReadAppointment(int appointmentId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -92,6 +96,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Update an existing appointment in the database
         public static void UpdateAppointment(Appointment appointment)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -111,6 +116,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete an appointment by appointment ID from the database
         public static void DeleteAppointment(int appointmentId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -123,6 +129,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete appointments by veterinarian ID from the database
         public static void DeleteAppointmentsByVeterinarian(int vetId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -134,7 +141,9 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
-         public static void DeleteAppointmentsByOwner(int ownerId)
+
+        // Delete appointments by owner ID from the database
+        public static void DeleteAppointmentsByOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -146,6 +155,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete appointments by pet ID from the database
         public static void DeleteAppointmentsByPet(int petId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -157,8 +167,9 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
-		
-		public static DataTable SelectAllOwners()
+
+        // Select all owners from the database
+        public static DataTable SelectAllOwners()
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -174,6 +185,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Create a new owner in the database
         public static void CreateOwner(Owner owner)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -190,6 +202,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Read an owner by owner ID from the database
         public static Owner ReadOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -217,6 +230,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Update an existing owner in the database
         public static void UpdateOwner(Owner owner)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -234,6 +248,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete an owner by owner ID from the database
         public static void DeleteOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -245,8 +260,9 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
-		
-		public static DataTable SelectAllPets()
+
+        // Select all pets from the database
+        public static DataTable SelectAllPets()
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -262,6 +278,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Select pets by owner ID from the database
         public static DataTable SelectPetsByOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -279,6 +296,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Select pets by owner ID from the database and return as a list
         public static List<Pet> SelectPetsByOwnerList(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -307,6 +325,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Create a new pet in the database
         public static void CreatePet(Pet pet)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -323,6 +342,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Read a pet by pet ID from the database
         public static Pet ReadPet(int petId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -350,6 +370,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Update an existing pet in the database
         public static void UpdatePet(Pet pet)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -367,6 +388,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete a pet by pet ID from the database
         public static void DeletePet(int petId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -379,6 +401,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Delete pets by owner ID from the database
         public static void DeletePetsByOwner(int ownerId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -390,8 +413,9 @@ namespace FINALS_CS2B_GRP4
                 command.ExecuteNonQuery();
             }
         }
-		
-		public static DataTable SelectAllVeterinarians()
+
+        // Select all veterinarians from the database
+        public static DataTable SelectAllVeterinarians()
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -407,6 +431,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Create a new veterinarian in the database
         public static void CreateVeterinarian(Veterinarian veterinarian)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -423,6 +448,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Read a veterinarian by veterinarian ID from the database
         public static Veterinarian ReadVeterinarian(int vetId)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -450,6 +476,7 @@ namespace FINALS_CS2B_GRP4
             }
         }
 
+        // Update an existing veterinarian in the database
         public static void UpdateVeterinarian(Veterinarian veterinarian)
         {
             using (var connection = new MySqlConnection(connectionString))
@@ -468,6 +495,7 @@ namespace FINALS_CS2B_GRP4
         }
 
 
+        // Delete a veterinarian by veterinarian ID from the database
         public static void DeleteVeterinarian(int vetId)
         {
             using (var connection = new MySqlConnection(connectionString))

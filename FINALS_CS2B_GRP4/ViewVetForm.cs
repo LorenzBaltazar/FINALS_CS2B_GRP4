@@ -15,6 +15,8 @@ namespace FINALS_CS2B_GRP4
     {
         private Form parentForm;
         private int vetID;
+
+        // Constructor
         public frmVetView(Form parentForm, int vetID, string fName, string lName, string specialization, string phoneNum, string email)
         {
             InitializeComponent();
@@ -39,6 +41,7 @@ namespace FINALS_CS2B_GRP4
             };
         }
 
+        // Event handler for the Update button
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string editFName = txtFName.Text;
@@ -58,12 +61,15 @@ namespace FINALS_CS2B_GRP4
             };
             DatabaseHelper.UpdateVeterinarian(editVet);
             MessageBox.Show("Successfully Updated.");
-            if (parentForm is IRefreshable)
-                ((IRefreshable) parentForm).refreshDatagrid();
-            this.Close();
 
+            // Refresh the parent form's datagrid if it implements the IRefreshable interface
+            if (parentForm is IRefreshable)
+                ((IRefreshable)parentForm).refreshDatagrid();
+
+            this.Close();
         }
 
+        // Event handler for the Delete button
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure? (This will delete related appointments)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -73,8 +79,11 @@ namespace FINALS_CS2B_GRP4
                 DatabaseHelper.DeleteAppointmentsByVeterinarian(vetID);
                 DatabaseHelper.DeleteVeterinarian(vetID);
                 MessageBox.Show("Successfully Deleted.");
+
+                // Refresh the parent form's datagrid if it implements the IRefreshable interface
                 if (parentForm is IRefreshable)
-                    ((IRefreshable) parentForm).refreshDatagrid();
+                    ((IRefreshable)parentForm).refreshDatagrid();
+
                 this.Close();
             }
         }

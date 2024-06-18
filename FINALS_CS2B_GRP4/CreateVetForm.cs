@@ -14,6 +14,8 @@ namespace FINALS_CS2B_GRP4
     public partial class frmCreateVet : Form
     {
         IRefreshable refreshable;
+
+        // Constructor
         public frmCreateVet(IRefreshable refreshable = null)
         {
             this.refreshable = refreshable;
@@ -41,15 +43,20 @@ namespace FINALS_CS2B_GRP4
                 Email = email,
             };
 
+            // Create veterinarian in the database
             DatabaseHelper.CreateVeterinarian(veterinarian);
             MessageBox.Show("Successfully Created.");
+
+            // Refresh the datagrid if refreshable is not null
             if (!(refreshable is null))
                 refreshable.refreshDatagrid();
-            this.Close();           
+
+            this.Close();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            // Clear the textboxes
             txtFName.Text = "";
             txtLName.Text = "";
             txtSpecialization.Text = "";

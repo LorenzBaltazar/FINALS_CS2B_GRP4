@@ -13,6 +13,8 @@ namespace FINALS_CS2B_GRP4
     public partial class frmCreateOwner : Form
     {
         IRefreshable refreshable;
+
+        // Constructor
         public frmCreateOwner(IRefreshable refreshable = null)
         {
             this.refreshable = refreshable;
@@ -22,7 +24,7 @@ namespace FINALS_CS2B_GRP4
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            //clear all input text in text box
+            // Clear all input text in text box
             txtFName.Text = "";
             txtLName.Text = "";
             txtAddress.Text = "";
@@ -39,6 +41,7 @@ namespace FINALS_CS2B_GRP4
             string phoneNum = txtPhoneNum.Text;
             string email = txtEmail.Text;
 
+            // Create a new instance of the Owner class and assign the input values
             Owner owner = new Owner()
             {
                 FirstName = fName,
@@ -48,11 +51,15 @@ namespace FINALS_CS2B_GRP4
                 Email = email,
             };
 
+            // Call the CreateOwner method from the DatabaseHelper class to create a new owner
             DatabaseHelper.CreateOwner(owner);
             MessageBox.Show("Successfully Created.");
+
+            // Refresh the datagrid if refreshable is not null
             if (!(refreshable is null))
                 refreshable.refreshDatagrid();
-            this.Close();           
+
+            this.Close();
         }
     }
 }

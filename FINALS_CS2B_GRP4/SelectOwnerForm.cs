@@ -13,6 +13,7 @@ namespace FINALS_CS2B_GRP4
     public partial class frmSelectOwner : Form, IRefreshable
     {
         public Owner selectedOwner;
+
         public frmSelectOwner()
         {
             InitializeComponent();
@@ -24,9 +25,13 @@ namespace FINALS_CS2B_GRP4
         {
             refreshDatagrid();
         }
+
         public void refreshDatagrid()
         {
+            // Retrieve all owners from the database
             DataTable dtOwner = DatabaseHelper.SelectAllOwners();
+
+            // Bind the owners to the data grid view
             dgOwnerList.DataSource = dtOwner;
         }
 
@@ -35,6 +40,8 @@ namespace FINALS_CS2B_GRP4
             if (dgOwnerList.SelectedRows.Count > 0)
             {
                 DataGridViewRow row = dgOwnerList.SelectedRows[0];
+
+                // Retrieve the selected owner's information from the data grid view
                 int ownerID = Convert.ToInt32(row.Cells["owner_id"].Value);
                 string fName = row.Cells["first_name"].Value.ToString();
                 string lName = row.Cells["last_name"].Value.ToString();
@@ -42,8 +49,13 @@ namespace FINALS_CS2B_GRP4
                 string phoneNum = row.Cells["phone_number"].Value.ToString();
                 string email = row.Cells["email"].Value.ToString();
 
+                // Create an Owner object with the retrieved information
                 Owner owner = new Owner { Address = address, Email = email, FirstName = fName, LastName = lName, OwnerId = ownerID, PhoneNumber = phoneNum };
+
+                // Set the selected owner
                 selectedOwner = owner;
+
+                // Set the dialog result to OK and close the form
                 DialogResult = DialogResult.OK;
                 this.Close();
             }

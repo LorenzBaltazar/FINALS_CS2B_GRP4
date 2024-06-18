@@ -13,6 +13,7 @@ namespace FINALS_CS2B_GRP4
     public partial class frmSelectPet : Form, IRefreshable
     {
         public Pet selectedPet;
+
         public frmSelectPet()
         {
             InitializeComponent();
@@ -20,22 +21,27 @@ namespace FINALS_CS2B_GRP4
             CancelButton = btnCancel;
         }
 
+        // Event handler for form load
         private void frmSelectPet_Load(object sender, EventArgs e)
         {
             refreshDatagrid();
         }
+
+        // Refreshes the datagrid with pet information
         public void refreshDatagrid()
         {
             DataTable dtPet = DatabaseHelper.SelectAllPets();
 
             dtPet.Columns.Add("owner_name");
 
-            foreach (DataRow row in dtPet.Rows) {
+            foreach (DataRow row in dtPet.Rows)
+            {
                 if (row["owner_id"].Equals(DBNull.Value))
                 {
                     row["owner_name"] = "No Owner";
                     continue;
                 }
+
                 int ownerId = Convert.ToInt32(row["owner_id"]);
                 Owner owner = DatabaseHelper.ReadOwner(ownerId);
 
@@ -48,6 +54,7 @@ namespace FINALS_CS2B_GRP4
             dgPetList.DataSource = dtPet;
         }
 
+        // Event handler for select button click
         private void btnSelect_Click(object sender, EventArgs e)
         {
             if (dgPetList.SelectedRows.Count > 0)

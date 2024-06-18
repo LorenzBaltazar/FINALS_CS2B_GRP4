@@ -14,6 +14,8 @@ namespace FINALS_CS2B_GRP4
     {
         private Form parentForm;
         private int ownerID;
+
+        // Constructor
         public frmOwnerView(Form parentForm, int ownerId, string fName, string lName, string address, string phoneNum, string email)
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace FINALS_CS2B_GRP4
             txtPhoneNum.Text = phoneNum;
         }
 
+        // Update button click event
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             string editAddress = txtAddress.Text;
@@ -48,27 +51,36 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.UpdateOwner(editOwner);
             MessageBox.Show("Successfully Edited.");
+
+            // Refresh the parent form if it implements the IRefreshable interface
             if (parentForm is IRefreshable)
                 ((IRefreshable)parentForm).refreshDatagrid();
+
             this.Close();
         }
 
+        // Delete button click event
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure? (This will delete related pets and appointments)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (result == DialogResult.Yes)
             {
+                // Delete related appointments and pets
                 DatabaseHelper.DeleteAppointmentsByOwner(ownerID);
                 DatabaseHelper.DeletePetsByOwner(ownerID);
                 DatabaseHelper.DeleteOwner(ownerID);
                 MessageBox.Show("Successfully Deleted.");
+
+                // Refresh the parent form if it implements the IRefreshable interface
                 if (parentForm is IRefreshable)
                     ((IRefreshable)parentForm).refreshDatagrid();
+
                 this.Close();
             }
         }
 
+        // View button click event
         private void btnView_Click(object sender, EventArgs e)
         {
             if (dgPetList.SelectedRows.Count > 0)
@@ -86,7 +98,7 @@ namespace FINALS_CS2B_GRP4
                     birthDate = Convert.ToDateTime(row.Cells["birth_date"].Value);
 
                 int? ownerId;
-                string ownerName = ""; 
+                string ownerName = "";
                 if (row.Cells["owner_id"].Value.Equals(DBNull.Value))
                 {
                     ownerId = null;
@@ -98,6 +110,7 @@ namespace FINALS_CS2B_GRP4
                     ownerName = owner.LastName + ", " + owner.FirstName;
                 }
 
+                // Open the pet view form with the selected pet's details
                 new frmPetView(this, petId, name, species, breed, birthDate, ownerId, ownerName).Show();
             }
             else
@@ -107,12 +120,16 @@ namespace FINALS_CS2B_GRP4
 
         }
 
+        // Form load event
         private void frmOwnerView_Load(object sender, EventArgs e)
         {
             refreshDatagrid();
         }
+
+        // Refresh the datagrid
         public void refreshDatagrid()
         {
+            // Select pets by owner from the database
             DataTable dtPet = DatabaseHelper.SelectPetsByOwner(ownerID);
             dgPetList.DataSource = dtPet;
             dgPetList.Columns["owner_id"].Visible = false;

@@ -17,11 +17,13 @@ namespace FINALS_CS2B_GRP4
             InitializeComponent();
         }
 
+        // Load event handler for the form
         private void frmManageAppointment_Load(object sender, EventArgs e)
         {
             refreshDatagrid();
         }
 
+        // Refresh the datagrid with appointment information
         public void refreshDatagrid()
         {
             DataTable dtAppointments = DatabaseHelper.SelectAllAppointments();
@@ -85,12 +87,14 @@ namespace FINALS_CS2B_GRP4
             dgAppointmentList.Columns["vet_id"].Visible = false;
         }
 
+        // Event handler for the Create Appointment button click
         private void btnCreateAppointment_Click(object sender, EventArgs e)
         {
             CreateAppointmentForm createAppointment = new CreateAppointmentForm(this);
             createAppointment.Show();
         }
 
+        // Event handler for the View button click
         private void btnView_Click(object sender, EventArgs e)
         {
             if (dgAppointmentList.SelectedRows.Count > 0)

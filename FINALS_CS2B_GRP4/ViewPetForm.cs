@@ -15,6 +15,8 @@ namespace FINALS_CS2B_GRP4
         private Form parentForm;
         private int petId;
         private int? ownerId;
+
+        // Constructor
         public frmPetView(Form parentForm, int petId, string petName, string species, string breed, DateTime? birthDate, int? ownerId, string ownerName)
         {
             InitializeComponent();
@@ -30,9 +32,11 @@ namespace FINALS_CS2B_GRP4
             txtOwner.Text = ownerName;
         }
 
+        // Update button click event
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Pet pet = new Pet {
+            Pet pet = new Pet
+            {
                 PetId = petId,
                 BirthDate = dtpBirthDate.Value.Date,
                 Breed = txtBreed.Text,
@@ -43,11 +47,15 @@ namespace FINALS_CS2B_GRP4
 
             DatabaseHelper.UpdatePet(pet);
             MessageBox.Show("Successfully Updated.");
+
+            // Refresh the parent form's datagrid if it implements IRefreshable interface
             if (parentForm is IRefreshable)
-                ((IRefreshable) parentForm).refreshDatagrid();
+                ((IRefreshable)parentForm).refreshDatagrid();
+
             this.Close();
         }
 
+        // Delete button click event
         private void btnDelete_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure? (This will delete related appointments)", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -57,34 +65,42 @@ namespace FINALS_CS2B_GRP4
                 DatabaseHelper.DeleteAppointmentsByPet(petId);
                 DatabaseHelper.DeletePet(petId);
                 MessageBox.Show("Successfully Deleted.");
+
+                // Refresh the parent form's datagrid if it implements IRefreshable interface
                 if (parentForm is IRefreshable)
-                    ((IRefreshable) parentForm).refreshDatagrid();
+                    ((IRefreshable)parentForm).refreshDatagrid();
+
                 this.Close();
             }
         }
 
+        // Clear Owner button click event
         private void btnClearOwner_Click(object sender, EventArgs e)
         {
             ownerId = null;
             txtOwner.Text = "";
         }
 
+        // Select Owner button click event
         private void btnSelect_Click(object sender, EventArgs e)
         {
             frmSelectOwner selectOwner = new frmSelectOwner();
             if (selectOwner.ShowDialog() == DialogResult.OK)
             {
                 Owner selectedOwner = selectOwner.selectedOwner;
-                txtOwner.Text = selectedOwner.LastName + ", " + selectedOwner.FirstName ;
+                txtOwner.Text = selectedOwner.LastName + ", " + selectedOwner.FirstName;
                 ownerId = selectedOwner.OwnerId;
             }
             selectOwner.Dispose();
         }
 
+        // Form load event
         private void frmPetView_Load(object sender, EventArgs e)
         {
             refreshDatagrid();
         }
+
+        // Refresh the datagrid
         public void refreshDatagrid()
         {
             DataTable dtAppointments = DatabaseHelper.SelectAllAppointments();
@@ -150,6 +166,7 @@ namespace FINALS_CS2B_GRP4
             dgAppointmentList.Columns["pet_name"].Visible = false;
         }
 
+        // View Appointment button click event
         private void btnViewAppointment_Click(object sender, EventArgs e)
         {
             if (dgAppointmentList.SelectedRows.Count > 0)
